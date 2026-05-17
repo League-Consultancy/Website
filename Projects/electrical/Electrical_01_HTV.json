@@ -1,0 +1,57 @@
+{
+  "theme": "electrical",
+  "meta": {
+    "division": "ELECTRICAL ENGINEERING DIVISION",
+    "client": "Prof. Mihir Vasavada (LD College of Engineering)",
+    "title": "HTV Silicone Rubber Insulator Simulation\nPhD Thesis",
+    "heroImage": "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=2070"
+  },
+  "summary": "This research project focuses on simulating electric field distribution in HTV silicone rubber polymer insulators under varying contamination and voltage conditions. Using advanced FEM analysis, it helps predict high-risk failure zones and improves understanding of insulation behavior in real-world environments.",
+  "challenge": {
+    "description": "Polymer insulators operating in polluted and wet environments are highly prone to electrical tracking, surface erosion, and premature failure. Traditional testing methods are expensive, time-consuming, and require extensive physical prototyping, making material evaluation inefficient. Additionally, unpredictable voltage distribution across contaminated surfaces creates uncertainty in performance prediction and lifespan estimation."
+  },
+  "techStack": [
+    "ANSYS 3D Finite Element Method (FEM)",
+    "Electrostatic Field Simulation",
+    "Material Conductivity Modeling",
+    "Computational Electromagnetics"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "Model Development",
+      "description": "Created detailed 3D models of polymer insulators and defined material properties including HTV silicone rubber characteristics and contamination layers."
+    },
+    {
+      "step": "02",
+      "title": "FEM Simulation & Contamination Analysis",
+      "description": "Performed ANSYS-based electric field simulations under varying contamination conditions such as pollutant layers, water droplets, and tracking paths across voltage ranges from 2.5 kV to 6 kV."
+    },
+    {
+      "step": "03",
+      "title": "Performance Evaluation & Optimization",
+      "description": "Analyzed electric field distribution results to identify high-risk breakdown zones and recommended design improvements for better hydrophobicity and voltage distribution control."
+    }
+  ],
+  "impact": [
+    {
+      "value": "Reduced",
+      "label": "Physical Testing Dependency",
+      "description": "Minimized reliance on costly and time-consuming physical prototype testing through accurate simulation-based evaluation."
+    },
+    {
+      "value": "Improved",
+      "label": "Failure Prediction Accuracy",
+      "description": "Enabled better identification of high-risk tracking and erosion zones using FEM-based electric field analysis."
+    },
+    {
+      "value": "Optimized",
+      "label": "Material Selection Insight",
+      "description": "Validated HTV silicone rubber as a high-performance insulating material with improved resistance to contamination and erosion."
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1000",
+    "https://images.unsplash.com/photo-1581091870622-1f4a0c2d7f8b?auto=format&fit=crop&q=80&w=1000"
+  ]
+}

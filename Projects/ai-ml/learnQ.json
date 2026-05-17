@@ -1,0 +1,64 @@
+{
+    "theme": "ai-ml",
+    "meta": {
+        "division": "AI-ML",
+        "title": "LearnQ - AI-Based Question Answer Generation from Videos",
+        "heroImage": "https://images.unsplash.com/photo-1522202176988-66273c2fd55?auto=format&fit=crop&q=80&w=2070"
+    },
+    "summary": "Developed an AI-powered platform that automatically generates question-answer pairs from educational video content. The system processes video transcripts, extracts contextual information, and generates structured QA datasets for learning and assessment applications.",
+    "challenge": {
+        "description": "Creating educational question-answer datasets manually from long video content is time-consuming and difficult to scale. The challenge was to build an automated system capable of understanding contextual information from videos and generating meaningful, high-quality QA pairs."
+    },
+    "techStack": [
+        "Python",
+        "NLP",
+        "Whisper",
+        "Triton Inference Server",
+        "Fine tuned ResNet"
+    ],
+    "methodology": [
+        {
+            "step": "01",
+            "title": "Video Processing & Transcription",
+            "description": "Implemented an automated pipeline to process video content and generate accurate transcripts using speech-to-text models."
+        },
+        {
+            "step": "02",
+            "title": "Context Extraction",
+            "description": "Extracted important concepts, keywords, and contextual information from transcripts using NLP techniques and text preprocessing methods."
+        },
+        {
+            "step": "03",
+            "title": "Question-Answer Generation",
+            "description": "Leveraged AI language models to generate meaningful question-answer pairs from extracted educational content while maintaining contextual relevance."
+        },
+        {
+            "step": "04",
+            "title": "Dataset Structuring & Storage",
+            "description": "Designed a structured storage system to organize generated QA pairs for training, educational platforms, and downstream AI applications."
+        }
+    ],
+    "impact": [
+        {
+            "value": "Automated",
+            "label": "Dataset Creation",
+            "description": "Reduced manual effort required for generating educational QA datasets from video content."
+        },
+        {
+            "value": "Scalable",
+            "label": "Processing Pipeline",
+            "description": "Designed the system to process multiple videos efficiently for large-scale dataset generation."
+        },
+        {
+            "value": "AI-Driven",
+            "label": "Content Understanding",
+            "description": "Utilized NLP and language models to generate contextually accurate question-answer pairs."
+        },
+        {
+            "value": "Structured Output",
+            "label": "Data Organization",
+            "description": "Generated organized and reusable datasets suitable for AI training and educational applications."
+        }
+    ],
+    "gallery": []
+}

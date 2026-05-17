@@ -1,0 +1,52 @@
+{
+  "theme": "ai-ml", 
+  "hero": {
+    "accentText": "Production-Grade AI/ML Solutions",
+    "title": "Intelligence Redefined",
+    "description": "Bridging academic theory and production-ready code. Building scalable architectures, advanced computer vision systems, and intelligent automation frameworks."
+  },
+  "capabilities": [
+    {
+      "title": "Advanced Computer Vision",
+      "description": "Implementing robust face-recognition, detection, and tracking pipelines using state-of-the-art frameworks like RetinaFace and ArcFace."
+    },
+    {
+      "title": "LLM & SLM Architectures",
+      "description": "Designing and deploying optimized Large/Small Language Models and Mixture-of-Experts (MoE) configurations for complex text generation and data synthesis."
+    },
+    {
+      "title": "Intelligent CAD Automation",
+      "description": "Engineering innovative prompt-to-CAD systems that translate natural language specifications into accurate parametric 3D geometric models."
+    }
+  ],
+  "projects": [
+    {
+      "id": "Project 01",
+      "title": "Smart Attendance System",
+      "description": "A high-precision, real-time automated tracking system leveraging deep face recognition (RetinaFace/ArcFace) to eliminate manual errors and optimize log management.",
+      "image": "https://images.unsplash.com/photo-1555255707-c07966488bc0?auto=format&fit=crop&q=80&w=1000",
+      "link": "../project-template.html?div=ai-ml&id=face-recognition"
+    },
+    {
+      "id": "Project 02",
+      "title": "LearnQ: Video-to-Knowledge Engine",
+      "description": "An AI platform utilizing automated video transcript analysis and specialized language models to synthesize dense educational footage into structured, interactive Q&A knowledge bases.",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000",
+      "link": "../project-template.html?div=ai-ml&id=learnQ"
+    },
+    {
+      "id": "Project 03",
+      "title": "Automated Optical Code Recognition Platform",
+      "description": "A real-time optical code recognition platform capable of detecting and decoding ~500 DataMatrix and barcode patterns at once",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000",
+      "link": "../project-template.html?div=ai-ml&id=code-recognition"
+    },
+    {
+      "id": "Project 04",
+      "title": "Edge AI Vision Monitoring System",
+      "description": "Developed an Edge AI-based real-time vision monitoring system capable of performing local AI inference on embedded devices with minimal latency.",
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1000",
+      "link": "../project-template.html?div=ai-ml&id=edge-ai"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "theme": "iot",
+  "meta": {
+    "division": "IOT & EMBEDDED",
+    "client": "SARVJAGAT AIR COMPRESSOR",
+    "title": "Industry 4.0 Machine Monitoring &\nReal-Time Operational Analytics",
+    "heroImage": ""
+  },
+  "summary": "This project implements a real-time industrial machine monitoring system designed for Industry 4.0 environments using ESP32 microcontrollers, current sensing hardware, and cloud-based IoT infrastructure. The solution enables continuous machine status tracking, accurate running hour calculation, and remote operational monitoring through web and mobile dashboards. By combining edge computing with cloud analytics, the system delivers actionable insights for productivity optimization, preventive maintenance, and operational efficiency across multiple industrial machines.",
+  "challenge": {
+    "description": "Industrial facilities often lack real-time visibility into machine utilization, operational efficiency, and equipment runtime data. Traditional monitoring methods depend on manual supervision and paper-based tracking, making it difficult to optimize productivity, schedule preventive maintenance, or identify machine idle time accurately. The client required a scalable and cost-effective monitoring solution capable of continuously tracking machine activity without human intervention while maintaining reliable operation during power and network interruptions. The project also needed to support multiple machines simultaneously, ensure secure cloud communication, and provide management-level analytics through accessible web and mobile interfaces."
+  },
+  "techStack": [
+    "ESP32 Microcontroller",
+    "Current Sensors (ACS712 / CT Clamp)",
+    "Blynk IoT Cloud Platform",
+    "Wi-Fi Connectivity",
+    "ADC-Based Signal Acquisition",
+    "Real-Time Telemetry Processing",
+    "Edge Runtime Computation",
+    "HTTPS Secure Communication",
+    "Industrial IoT Dashboard",
+    "Battery Backup Systems",
+    "OTA Firmware Updates",
+    "Time-Series Data Analytics"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "IoT Hardware Integration & Signal Acquisition",
+      "description": "Integrated ESP32 microcontrollers with non-invasive current sensing hardware to continuously monitor industrial machine activity. Configured ADC-based signal acquisition, noise filtering, and threshold-based state detection logic to accurately identify machine ON/OFF conditions in real time."
+    },
+    {
+      "step": "02",
+      "title": "Edge Processing & Cloud Connectivity",
+      "description": "Implemented edge-based runtime calculation directly on the ESP32 to ensure operational continuity during network outages. Established secure HTTPS communication with the Blynk IoT cloud platform for real-time telemetry transmission, historical data storage, and multi-device synchronization."
+    },
+    {
+      "step": "03",
+      "title": "Dashboard Development & Operational Analytics",
+      "description": "Developed responsive web and mobile dashboards for real-time machine monitoring, event tracking, and historical analytics. Enabled daily, weekly, and monthly runtime aggregation, utilization analysis, and operational trend visualization to support data-driven maintenance and productivity optimization."
+    }
+  ],
+  "impact": [
+    {
+      "value": "24/7",
+      "label": "REAL-TIME MACHINE VISIBILITY",
+      "description": "Enabled continuous remote monitoring of machine operational status, current consumption, and runtime analytics through cloud-connected dashboards."
+    },
+    {
+      "value": "MULTI",
+      "label": "DEVICE MONITORING SUPPORT",
+      "description": "Designed the system architecture to support simultaneous monitoring of multiple industrial machines with centralized dashboard management."
+    },
+    {
+      "value": "100H",
+      "label": "BACKUP OPERATIONAL SUPPORT",
+      "description": "Integrated battery-backed operation capable of maintaining monitoring functionality and onboard data storage during extended power outages."
+    }
+  ],
+  "gallery": []
+}

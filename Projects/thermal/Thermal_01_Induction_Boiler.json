@@ -1,0 +1,58 @@
+{
+  "theme": "thermal",
+  "meta": {
+    "division": "THERMAL",
+    "client": "Attach Industries",
+    "title": "Electric Induction Boiler System",
+    "heroImage": "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=2070"
+  },
+  "summary": "This project focuses on the design and implementation of a 50 kg/hr electric induction boiler system to replace the existing LDO-fired boiler at Attach Industries. The solution delivers high-efficiency steam generation using a fully electric heating approach integrated with PLC-based automation and safety controls. The system is engineered to improve operational efficiency, reduce fuel dependency, and ensure stable industrial steam output.",
+  "challenge": {
+    "description": "Attach Industries required a transition from a conventional LDO-based boiler system to a modern electric induction boiler to improve energy efficiency, safety, and environmental compliance. The existing setup had limitations in fuel dependency, operational consistency, and real-time process control. Additionally, there was a need to integrate advanced automation, including PLC-based monitoring, PID control, and multi-sensor safety systems, to ensure reliable steam generation at industrial standards."
+  },
+  "techStack": [
+    "PLC (Programmable Logic Controller)",
+    "PID Control Systems",
+    "VFD (Variable Frequency Drive)",
+    "RTD Temperature Sensors",
+    "Industrial Electrical Design"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "System Design & Engineering",
+      "description": "Detailed electrical and thermal design of the induction boiler system, including coil configuration, load calculations, wiring schematics, and selection of control components compatible with industrial requirements."
+    },
+    {
+      "step": "02",
+      "title": "Automation & Control Integration",
+      "description": "Development and integration of PLC-based control architecture with PID loops for temperature, pressure, and flow regulation. Integration of sensors, VFD-controlled pumps, and safety interlocks."
+    },
+    {
+      "step": "03",
+      "title": "Testing & Commissioning Support",
+      "description": "On-site implementation support, system testing, calibration of sensors, validation of control logic, and optimization of operational parameters for stable and efficient boiler performance."
+    }
+  ],
+  "impact": [
+    {
+      "value": "98–99%",
+      "label": "THERMAL EFFICIENCY",
+      "description": "Achieved through direct electric induction heating with minimized thermal losses and optimized coil energy distribution."
+    },
+    {
+      "value": "24/7",
+      "label": "AUTOMATED MONITORING",
+      "description": "Continuous real-time monitoring of temperature, pressure, flow, and water level using PLC-integrated sensors and alarms."
+    },
+    {
+      "value": "0",
+      "label": "DRY RUN INCIDENTS",
+      "description": "Prevented through water level sensors, interlock systems, and automated shutdown logic embedded in the PLC control system."
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1000",
+    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=1000"
+  ]
+}

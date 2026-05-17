@@ -1,0 +1,56 @@
+{
+  "theme": "division-theme-id",
+  "meta": {
+    "division": "UPPERCASE DIVISION NAME",
+    "client": "CLIENT NAME / PROTOTYPE",
+    "title": "Project Title\nLine Break If Needed",
+    "heroImage": "https://images.unsplash.com/photo-xxx?auto=format&fit=crop&q=80&w=2070"
+  },
+  "summary": "A brief 2-3 sentence overview of the project here. Focus on the core problem solved and the primary value delivered to the client.",
+  "challenge": {
+    "description": "Describe the specific technical and business challenges the client was facing. Why was this project necessary? What were the limitations of their existing systems?"
+  },
+  "techStack": [
+    "Tech 1",
+    "Tech 2",
+    "Tech 3"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "Phase 1 Title",
+      "description": "Describe what was done in this phase of the project implementation."
+    },
+    {
+      "step": "02",
+      "title": "Phase 2 Title",
+      "description": "Describe what was done in this phase of the project implementation."
+    },
+    {
+      "step": "03",
+      "title": "Phase 3 Title",
+      "description": "Describe what was done in this phase of the project implementation."
+    }
+  ],
+  "impact": [
+    {
+      "value": "45%",
+      "label": "METRIC LABEL",
+      "description": "Explain how this metric was achieved and what it means for the project."
+    },
+    {
+      "value": "24/7",
+      "label": "METRIC LABEL",
+      "description": "Explain how this metric was achieved and what it means for the project."
+    },
+    {
+      "value": "0",
+      "label": "METRIC LABEL",
+      "description": "Explain how this metric was achieved and what it means for the project."
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-xxx?auto=format&fit=crop&q=80&w=1000",
+    "https://images.unsplash.com/photo-yyy?auto=format&fit=crop&q=80&w=1000"
+  ]
+}

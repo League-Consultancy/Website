@@ -1,0 +1,60 @@
+{
+    "theme": "ai-ml",
+    "meta": {
+        "division": "AI-ML",
+        "title": "Edge AI Vision Monitoring System",
+        "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2070"
+    },
+    "summary": "Developed an Edge AI-based real-time vision monitoring system capable of performing local AI inference on embedded devices with minimal latency. The system focused on efficient computer vision processing, real-time detection, and optimized deployment on resource-constrained hardware.",
+    "challenge": {
+        "description": "Traditional cloud-based AI systems introduce latency, bandwidth dependency, and scalability limitations for real-time monitoring applications. The challenge was to build a lightweight and efficient Edge AI solution capable of processing video streams locally while maintaining reliable performance."
+    },
+    "techStack": [
+        "Python",
+        "OpenCV",
+        "ONNX Runtime",
+        "Raspberry Pi",
+        "Linux",
+        "CUDA"
+    ],
+    "methodology": [
+        {
+            "step": "01",
+            "title": "Embedded System Setup",
+            "description": "Configured embedded Linux environments and integrated camera modules for real-time image acquisition and processing."
+        },
+        {
+            "step": "02",
+            "title": "Optimized AI Inference",
+            "description": "Deployed lightweight AI models using ONNX Runtime to achieve efficient inference performance on edge hardware."
+        },
+        {
+            "step": "03",
+            "title": "Real-Time Vision Pipeline",
+            "description": "Implemented a low-latency computer vision pipeline for continuous monitoring, detection, and event processing."
+        }
+    ],
+    "impact": [
+        {
+            "value": "~35 ms",
+            "label": "Latency",
+            "description": "Enabled fast local AI inference without reliance on cloud infrastructure."
+        },
+        {
+            "value": "~12 FPS",
+            "label": "Frame Rate",
+            "description": "Supported AI execution directly on embedded and resource-constrained devices."
+        },
+        {
+            "value": "~98 %",
+            "label": "Accuracy",
+            "description": "Optimized processing pipelines for stable operation on lightweight hardware."
+        },
+        {
+            "value": "Real-time",
+            "label": "Performance",
+            "description": "Designed the system for integration into larger monitoring and automation environments."
+        }
+    ],
+    "gallery": []
+}

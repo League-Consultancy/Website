@@ -1,0 +1,63 @@
+{
+  "theme": "mechanical",
+  "meta": {
+    "division": "DESIGN & FEA",
+    "client": "Turbo Marine Private Limited",
+    "title": "Plate Thickness Optimization and\nVibration Analysis of Platform Plate Supporting Dust Suppression Cannon",
+    "heroImage": "https://images.unsplash.com/photo-1581091870622-1e7c1c4f5f0d?auto=format&fit=crop&q=80&w=2070"
+  },
+  "summary": "This project focuses on optimizing the thickness of a platform plate supporting a dust suppression cannon using finite element analysis. The goal was to reduce material usage while ensuring structural safety under a 600–700 kg load and high-speed operating conditions. The optimized design achieves significant weight reduction without compromising performance or safety.",
+  "challenge": {
+    "description": "The existing platform plate had a thickness of 10 mm, resulting in higher material usage and cost. The challenge was to reduce the thickness while ensuring it could safely support a 600–700 kg operational load. Additionally, the system had to maintain structural integrity under vibration at 2880 RPM and avoid resonance conditions that could lead to failure or excessive deflection."
+  },
+  "techStack": [
+    "ANSYS (Finite Element Analysis & Vibration Analysis)",
+    "S-275 Structural Steel",
+    "Static Structural Analysis",
+    "Modal Analysis",
+    "Harmonic Response Analysis"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "Geometry & Material Definition",
+      "description": "A 3D model of the platform plate was created in ANSYS and assigned S-275 structural steel properties, including elastic modulus, density, and Poisson’s ratio."
+    },
+    {
+      "step": "02",
+      "title": "Static Structural Analysis",
+      "description": "Load conditions of 600–700 kg were applied on the platform with fixed supports at mounting points. Stress and deformation were evaluated for thickness variations from 10 mm to 5 mm."
+    },
+    {
+      "step": "03",
+      "title": "Modal & Vibration Analysis",
+      "description": "Modal analysis was performed to determine natural frequencies of the structure. Harmonic analysis at 2880 RPM excitation frequency was conducted to ensure no resonance conditions occurred."
+    },
+    {
+      "step": "04",
+      "title": "Thickness Optimization",
+      "description": "Iterative comparison of results for thicknesses from 10 mm to 5 mm was performed to identify the minimum safe thickness with acceptable stress and deformation levels."
+    }
+  ],
+  "impact": [
+    {
+      "value": "50%",
+      "label": "MATERIAL REDUCTION",
+      "description": "Plate thickness successfully reduced from 10 mm to 5 mm, significantly lowering material usage and cost."
+    },
+    {
+      "value": "11 MPa",
+      "label": "MAXIMUM STRESS CONTROLLED",
+      "description": "Stress levels remained low and well within allowable limits for S-275 structural steel under all tested conditions."
+    },
+    {
+      "value": "0",
+      "label": "RESONANCE RISK",
+      "description": "No resonance was observed between operating frequency and natural frequencies, ensuring safe dynamic performance."
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1581091215367-59ab6f4b5a5a?auto=format&fit=crop&q=80&w=1000",
+    "https://images.unsplash.com/photo-1581092334490-2f9b1a1c2f5c?auto=format&fit=crop&q=80&w=1000"
+  ]
+}

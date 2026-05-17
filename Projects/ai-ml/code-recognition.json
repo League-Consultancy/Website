@@ -1,0 +1,64 @@
+{
+    "theme": "ai-ml",
+    "meta": {
+        "division": "AI-ML",
+        "title": "Automated Optical Code Recognition Platform",
+        "heroImage": "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&q=80&w=2070"
+    },
+    "summary": "Developed a real-time optical code recognition platform capable of detecting and decoding DataMatrix and barcode patterns using computer vision techniques. The system was optimized for high-speed industrial scanning and automated identification workflows.",
+    "challenge": {
+        "description": "Industrial scanning systems require fast and reliable code detection under varying lighting conditions, motion blur, and hardware constraints. The challenge was to build a low-latency vision pipeline capable of accurate decoding in real-time environments."
+    },
+    "techStack": [
+        "Python",
+        "OpenCV",
+        "Computer Vision",
+        "Multi-threading",
+        "Linux"
+    ],
+    "methodology": [
+        {
+            "step": "01",
+            "title": "Image Acquisition Pipeline",
+            "description": "Implemented a high-speed camera input pipeline for capturing and processing image streams with minimal latency."
+        },
+        {
+            "step": "02",
+            "title": "Preprocessing & Enhancement",
+            "description": "Applied image preprocessing techniques such as filtering, contrast enhancement, and noise reduction to improve code detection accuracy."
+        },
+        {
+            "step": "03",
+            "title": "Optical Code Detection",
+            "description": "Developed a real-time detection and decoding pipeline for identifying DataMatrix and barcode patterns from image frames."
+        },
+        {
+            "step": "04",
+            "title": "Performance Optimization",
+            "description": "Optimized processing speed using multi-threaded architectures and efficient frame handling techniques."
+        }
+    ],
+    "impact": [
+        {
+            "value": "0.5 sec",
+            "label": "Processing Time",
+            "description": "Enabled low-latency optical code recognition for industrial workflows."
+        },
+        {
+            "value": "120 FPS",
+            "label": "Frame Rate",
+            "description": "Optimized the platform for rapid image acquisition and decoding."
+        },
+        {
+            "value": "98%",
+            "label": "Accuracy",
+            "description": "Reduced manual intervention through automated code detection and recognition."
+        },
+        {
+            "value": "24/7",
+            "label": "Availability",
+            "description": "Designed the system to support integration with larger industrial monitoring environments."
+        }
+    ],
+    "gallery": []
+}

@@ -1,0 +1,61 @@
+{
+  "theme": "automation",
+  "meta": {
+    "division": "AUTOMATION AND ROBOTICS",
+    "client": "Space Applications Centre (ISRO)",
+    "title": "Payload Control and Tracking Unit (PCTU)\nE2.2",
+    "heroImage": "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=2070"
+  },
+  "summary": "The Payload Control and Tracking Unit (PCTU) is a next-generation closed-loop tracking system designed for highly precise spacecraft-to-ground optical communication. It enhances traditional tracking methods by integrating real-time orbital mechanics and predictive pointing to achieve sub-10 µrad accuracy. The system enables seamless, continuous alignment between spaceborne payloads and ground stations for high-reliability data transmission.",
+  "challenge": {
+    "description": "The existing tracking architecture relies primarily on reactive line-of-sight alignment using scan mirrors and fine steering mechanisms, which introduces latency, mechanical lag, and limited predictive capability. This results in reduced accuracy under high-velocity orbital dynamics and environmental disturbances. The system also lacks tight integration between software-level orbital predictions and hardware-level actuation, limiting scalability toward deep-space-grade precision communication."
+  },
+  "techStack": [
+    "Python (Flask Backend)",
+    "SGP4 / Orbital Mechanics Engine",
+    "WebSockets / SSE Real-Time Streaming",
+    "STM32 / Teensy Microcontrollers",
+    "CAN Bus / UART / EtherCAT Communication",
+    "PID Control Systems",
+    "Absolute Encoders (BiSS-C / SSI)",
+    "Servo / Stepper Motor Systems"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "Software-to-Hardware Communication Bridge",
+      "description": "Developed a low-latency data pipeline to stream high-precision azimuth, elevation, and orbital parameters from the Python-based orbital mechanics engine to external hardware controllers. Implemented structured serialization, asynchronous streaming, and buffering mechanisms to ensure sub-10ms synchronization between computed trajectories and actuator inputs."
+    },
+    {
+      "step": "02",
+      "title": "Embedded Control System & Closed-Loop Integration",
+      "description": "Designed MCU firmware and motor driver integration to convert incoming trajectory data into precise mechanical motion for azimuth and elevation axes. Integrated absolute encoders and implemented cascade PID control loops for real-time feedback correction, enabling stable and accurate closed-loop tracking under dynamic conditions."
+    },
+    {
+      "step": "03",
+      "title": "Predictive Tracking, Point-Ahead Actuation & System Validation",
+      "description": "Enhanced orbital mechanics engine to compute predictive pointing errors and point-ahead angles for optical alignment. Integrated fine steering mirrors for micro-corrections and established full system validation using simulated high-velocity satellite passes. Verified performance targets including sub-10 µrad pointing accuracy and continuous lock maintenance."
+    }
+  ],
+  "impact": [
+    {
+      "value": "<10 µrad",
+      "label": "POINTING ACCURACY",
+      "description": "Achieved ultra-high precision tracking by combining predictive orbital calculations with closed-loop motor control and encoder feedback systems."
+    },
+    {
+      "value": "<10 ms",
+      "label": "CONTROL LATENCY",
+      "description": "Reduced software-to-hardware communication delay through asynchronous streaming and optimized data serialization pipelines."
+    },
+    {
+      "value": "24/7",
+      "label": "TRACKING CAPABILITY",
+      "description": "Enabled continuous real-time satellite tracking with fault-tolerant closed-loop correction and autonomous predictive alignment."
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=1000",
+    "https://images.unsplash.com/photo-1581822261290-991b38693d1b?auto=format&fit=crop&q=80&w=1000"
+  ]
+}

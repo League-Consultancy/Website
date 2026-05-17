@@ -1,0 +1,60 @@
+{
+  "theme": "iot",
+  "meta": {
+    "division": "IOT & EMBEDDED",
+    "client": "DEFENSE CLIENT (INDIAN ARMY)",
+    "title": "Predictive Maintenance &\nReal-Time Artillery Diagnostics",
+    "heroImage": ""
+  },
+  "summary": "This project modernizes conventional artillery maintenance by integrating embedded sensor networks, telemetry systems, and predictive diagnostics into legacy defense platforms. The solution replaces reactive, trial-and-error troubleshooting with a real-time, data-driven maintenance framework capable of continuously monitoring hydraulic, electrical, and mechanical subsystems. By standardizing diagnostics across 38 critical fault conditions, the system improves operational readiness, reduces Mean Time To Repair (MTTR), and enhances overall equipment reliability under harsh field conditions.",
+  "challenge": {
+    "description": "Traditional artillery maintenance depended heavily on manual inspections, auditory diagnostics, and sequential dismantling of subsystems to identify failures. This reactive approach resulted in extended downtime, inconsistent reliability, unnecessary component replacement, and increased operational risk. Modern artillery systems integrate complex hydraulic, electrical, and mechanical subsystems operating under extreme stress conditions, where micro-level anomalies such as voltage instability, pressure fluctuations, contamination, and mechanical fatigue cannot be accurately diagnosed through conventional methods alone. The project required the implementation of robust sensor networks, EMI-resistant circuitry, and real-time telemetry systems capable of operating reliably in demanding military environments while ensuring highly accurate fault detection and predictive maintenance capabilities."
+  },
+  "techStack": [
+    "Embedded Sensor Networks",
+    "Hydraulic Pressure Sensors",
+    "Current & Load Monitoring Sensors",
+    "ADC-Based Voltage Monitoring",
+    "Signal Conditioning Circuits",
+    "Microcontroller-Based DAQ Systems",
+    "Real-Time Telemetry Processing",
+    "Predictive Maintenance Analytics",
+    "Industrial EMI/RFI Filtering",
+    "24V DC Embedded Power Systems"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "Fault Analysis & System Standardization",
+      "description": "Identified and documented 38 critical faults across six major artillery subsystems including hydraulic, electrical, undercarriage, power unit, laying, and elevation systems. Developed standardized troubleshooting procedures and maintenance workflows for structured fault isolation."
+    },
+    {
+      "step": "02",
+      "title": "Sensor Integration & Embedded Circuit Design",
+      "description": "Integrated hydraulic pressure sensors, current sensing modules, and precision voltage monitoring circuits directly into artillery subsystems. Designed signal-conditioning, isolation, and filtering circuits to ensure accurate telemetry acquisition under high-noise and vibration-intensive operational environments."
+    },
+    {
+      "step": "03",
+      "title": "Real-Time Diagnostics & Predictive Maintenance",
+      "description": "Implemented a centralized microcontroller-based data acquisition architecture capable of high-frequency sensor sampling and real-time telemetry analysis. Established predictive maintenance workflows to detect anomalies early, forecast component degradation, and enable evidence-based maintenance interventions."
+    }
+  ],
+  "impact": [
+    {
+      "value": "38",
+      "label": "CRITICAL FAULTS STANDARDIZED",
+      "description": "Established structured troubleshooting and predictive maintenance procedures covering 38 fault scenarios across six critical artillery subsystems."
+    },
+    {
+      "value": "24/7",
+      "label": "REAL-TIME SYSTEM MONITORING",
+      "description": "Enabled continuous telemetry-driven monitoring of hydraulic, electrical, and mechanical system parameters to improve operational readiness."
+    },
+    {
+      "value": "6",
+      "label": "SUBSYSTEMS INTEGRATED",
+      "description": "Successfully integrated predictive diagnostics and sensor monitoring across elevation, laying, hydraulic, electrical, undercarriage, and power unit systems."
+    }
+  ],
+  "gallery": []
+}

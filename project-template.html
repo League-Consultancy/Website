@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title | League Consultancy</title>
+    <meta name="description" content="Detailed case study of our technical solution and business impact.">
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Project Specific Styles -->
+    <link rel="stylesheet" href="css/project.css">
+</head>
+
+<body data-theme="home"> <!-- Change data-theme to match division (e.g., ai-ml, iot, etc.) -->
+
+    <header></header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="project-hero" id="project-hero" style="background-image: url('');">
+            <div class="container">
+                <div class="project-hero-content">
+                    <div class="project-meta">
+                        <span class="project-tag text-mono" id="project-division">DIVISION</span>
+                    </div>
+                    <h2 id="project-title">Loading...</h2>
+                </div>
+                <div class="project-summary-card">
+                    <h3 class="text-mono">EXECUTIVE SUMMARY</h3>
+                    <p id="project-summary">...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Challenge -->
+        <section class="section-padding">
+            <div class="container challenge-grid">
+                <div>
+                    <h2 class="text-accent text-mono" style="margin-bottom: var(--space-md);">01. The Challenge</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8;" id="challenge-description">
+                        ...
+                    </p>
+                </div>
+                <div class="tech-stack">
+                    <h4 class="text-mono" style="margin-bottom: var(--space-sm); font-size: 0.8rem; opacity: 0.6;">
+                        TECHNOLOGIES USED</h4>
+                    <div class="tech-tags" id="tech-stack-container" style="display: grid;">
+                        <!-- Tags will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology -->
+        <section class="section-padding bg-surface">
+            <div class="container">
+                <h2 class="text-accent text-mono" style="margin-bottom: var(--space-md);">02. Methodology</h2>
+                <div class="methodology-grid" id="methodology-container">
+                    <!-- Steps will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stats -->
+        <section class="section-padding bg-dark text-white">
+            <div class="container">
+                <h2 class="text-mono" style="margin-bottom: var(--space-lg); opacity: 0.5;">03. Business Impact</h2>
+                <div class="stats-grid" id="impact-container"
+                    style="display: flex;justify-content: space-between;position: relative;width: 100vw;left: 50%;right: 50%;margin-left: -50vw;margin-right: -50vw; background-color: var(--theme-surface); padding: 0 var(--space-xl);">
+                    <!-- Stats will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="text-accent text-mono" style="margin-bottom: var(--space-lg);">Project Gallery</h2>
+                <div class="project-gallery" id="gallery-container">
+                    <!-- Images will be injected here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(function () {
+            // Get project info from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const division = urlParams.get('div');
+            const projectId = urlParams.get('id');
+
+            if (!division || !projectId) {
+                $('#project-title').text('Project Not Found');
+                return;
+            }
+
+            // Load Project Data
+            $.getJSON(`Projects/${division}/${projectId}.json`, function (data) {
+                // Set Theme
+                $('body').attr('data-theme', data.theme || division);
+
+                // Populate Hero
+                $('#project-hero').css('background-image', `url('${data.meta.heroImage}')`);
+                $('#project-division').text(data.meta.division);
+                $('#project-client').text(data.meta.client);
+                $('#project-title').html(data.meta.title.replace('\n', '<br>'));
+                $('#project-summary').text(data.summary);
+
+                // Populate Challenge
+                $('#challenge-description').text(data.challenge.description);
+
+                // Tech Stack
+                let techHtml = '';
+                data.techStack.forEach(tech => {
+                    techHtml += `<span class="tech-tag">${tech}</span>`;
+                });
+                $('#tech-stack-container').html(techHtml);
+
+                // Methodology
+                let methodHtml = '';
+                data.methodology.forEach(m => {
+                    methodHtml += `
+                        <div class="method-card" style="margin-bottom: var(--space-md);">
+                            <div style="display: flex;align-items: center;gap: 10px;">
+                                <span class="method-num text-mono">${m.step}</span>
+                                <h3 style="margin: var(--space-sm) 0;">${m.title}</h3>
+                            </div>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">${m.description}</p>
+                        </div>`;
+                });
+                $('#methodology-container').html(methodHtml);
+
+                // Impact
+                let impactHtml = '';
+                data.impact.forEach(stat => {
+                    impactHtml += `
+                        <div class="stat-card">
+                            <div class="stat-value text-accent">${stat.value}</div>
+                            <div class="stat-label text-mono">${stat.label}</div>
+                            <p style="margin-top: var(--space-sm); font-size: 0.9rem; opacity: 0.7; text-align:center;">${stat.description}</p>
+                        </div>`;
+                });
+                $('#impact-container').html(impactHtml);
+
+                // Gallery
+                let galleryHtml = '';
+                data.gallery.forEach(img => {
+                    galleryHtml += `<img src="${img}" alt="Project Detail" style="width: 100%; height: 400px; object-fit: cover; margin-bottom: 20px;">`;
+                });
+                $('#gallery-container').html(galleryHtml);
+            }).fail(function () {
+                $('#project-title').text('Error Loading Project');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+</html>

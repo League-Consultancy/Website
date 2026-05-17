@@ -1,0 +1,57 @@
+{
+  "theme": "automation",
+  "meta": {
+    "division": "AUTOMATION AND ROBOTICS",
+    "title": "Closed-Loop 6-DOF Antenna Positioning\n& Control System",
+    "heroImage": "https://images.unsplash.com/photo-xxx?auto=format&fit=crop&q=80&w=2070"
+  },
+  "summary": "This project focuses on developing a high-precision closed-loop 6 Degrees of Freedom (DOF) control system for antenna positioning used in satellite and aerospace applications. The solution enables accurate spatial orientation and trajectory control using real-time feedback and advanced kinematic modeling. It significantly improves positioning reliability for critical communication and space operations.",
+  "challenge": {
+    "description": "The aerospace industry demands extremely precise control systems for spacecraft orientation and antenna positioning, where even minor deviations can lead to mission-critical failures. Existing systems face challenges in integrating multiple technologies such as stepper motors, laser tracking, and AI-based control while maintaining synchronization and accuracy. Additionally, achieving high reliability with cost efficiency in satellite-grade systems remains a major constraint, requiring robust closed-loop control and real-time validation mechanisms."
+  },
+  "techStack": [
+    "Arduino UNO",
+    "MATLAB",
+    "Stepper Motors & Drivers",
+    "Laser Tracker",
+    "PolyWorks"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "System Design & Hardware Integration",
+      "description": "Designed and integrated stepper motors, drivers, and Arduino UNO to build the foundational closed-loop actuation system for 6DOF antenna movement control."
+    },
+    {
+      "step": "02",
+      "title": "Kinematics & Trajectory Planning",
+      "description": "Developed inverse kinematics models and trajectory planning algorithms in MATLAB to compute precise antenna orientation and motion paths in 3D space."
+    },
+    {
+      "step": "03",
+      "title": "Real-Time Feedback & Validation",
+      "description": "Implemented Laser Tracker and PolyWorks integration for real-time measurement, validation, and correction of antenna positioning to ensure micron-level accuracy."
+    }
+  ],
+  "impact": [
+    {
+      "value": "Micron-level",
+      "label": "POSITIONING ACCURACY",
+      "description": "Achieved extremely high precision in antenna positioning through closed-loop feedback and real-time correction systems."
+    },
+    {
+      "value": "Real-time",
+      "label": "FEEDBACK SYSTEM",
+      "description": "Enabled continuous monitoring and validation using Laser Tracker and PolyWorks for improved system reliability."
+    },
+    {
+      "value": "Reduced",
+      "label": "MANUAL INTERVENTION",
+      "description": "Automation of control and correction loops significantly minimized human intervention in antenna alignment operations."
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-xxx?auto=format&fit=crop&q=80&w=1000",
+    "https://images.unsplash.com/photo-yyy?auto=format&fit=crop&q=80&w=1000"
+  ]
+}

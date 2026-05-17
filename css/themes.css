@@ -1,0 +1,104 @@
+/* League Consultancy - Theme System */
+
+:root {
+    /* Base Colors */
+    --white: #FFFFFF;
+    --black: #121212;
+    --gray-light: #F5F5F5;
+    --gray-mid: #707070;
+    --gray-dark: #333333;
+    
+    /* Global Typography */
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Roboto Mono', monospace;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    --space-text: 10rem;
+
+    /* Theme Variables (Defaults to Home Theme) */
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: var(--gray-mid);
+    --theme-surface: var(--gray-light);
+    --theme-border: var(--gray-mid);
+}
+
+/* Home Theme (Default) */
+[data-theme="home"] {
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: var(--gray-mid);
+    --theme-surface: var(--gray-light);
+    --theme-border: var(--black);
+}
+
+/* Division Themes - All Light Mode */
+[data-theme="mechanical"] {
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: #999999;
+    --theme-surface: #F8F8F8;
+    --theme-border: #999999;
+}
+
+[data-theme="electrical"] {
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: #0077B6;
+    --theme-surface: #E6F1F7;
+    --theme-border: #0077B6;
+}
+
+[data-theme="automation"] {
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: #38B000;
+    --theme-surface: #EBF7E6;
+    --theme-border: #38B000;
+}
+
+[data-theme="robotics"] {
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: #FB8500;
+    --theme-surface: #FFF3E6;
+    --theme-border: #FB8500;
+}
+
+[data-theme="ai-ml"] {
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: #4F6BFE;
+    --theme-surface: #EDF0FF;
+    --theme-border: #4F6BFE;
+}
+
+[data-theme="iot"] {
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: #4CC9F0;
+    --theme-surface: #EDFAFE;
+    --theme-border: #4CC9F0;
+}
+
+[data-theme="drone"] {
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: #2F9357;
+    --theme-surface: #EAF4EE;
+    --theme-border: #2F9357;
+}
+
+[data-theme="thermal"] {
+    --theme-bg: var(--white);
+    --theme-text: var(--black);
+    --theme-accent: #FFB703;
+    --theme-surface: #FFF8E6;
+    --theme-border: #FFB703;
+}

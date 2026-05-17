@@ -1,0 +1,311 @@
+/* League Consultancy - Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    scroll-snap-type: y mandatory; /* Enable vertical snapping */
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Typography Utilities */
+.text-mono { font-family: var(--font-mono); }
+.text-accent { color: var(--theme-accent); }
+.bg-surface { background-color: var(--theme-surface); }
+
+/* Layout Components */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.section-padding {
+    padding: var(--space-lg) 0;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: var(--theme-surface);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-text{
+    padding-left: var(--space-sm);
+    font-size: xx-large;
+}
+
+.logo span {
+    color: var(--theme-accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg); /* More space between tabs */
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    transition: 0.3s ease;
+    color: black;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    color: var(--theme-accent);
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 1024px) {
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .grid-3, .grid-2 { grid-template-columns: 1fr; }
+    :root { font-size: 14px; }
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid var(--theme-border);
+    background: transparent;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background: var(--theme-accent);
+    color: var(--white);
+    border-color: var(--theme-accent);
+    transform: translateY(-2px);
+}
+
+.btn-highlight {
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border-radius: 0; /* Keeping it sharp */
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-highlight:hover {
+    background: var(--theme-accent);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Portal Sections (Homepage) */
+.portal-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: start; /* Snap to the start of each section */
+    scroll-snap-stop: always; /* Force snap to each section, don't skip */
+}
+
+.portal-content {
+    padding-left: 10rem !important;
+    width: 55%; /* Increased width to give text more room */
+    position: relative;
+    z-index: 10; /* Ensure text is above image */
+}
+
+.hero-title {
+    font-size: clamp(3rem, 10vw, 6rem);
+    line-height: 0.9;
+    margin-bottom: var(--space-md);
+    font-weight: 800;
+}
+
+.portal-image {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 45%;
+    height: -webkit-fill-available;   
+    background-size: cover;
+    background-position: center;
+    transition: 0.6s ease;
+    mask-image: linear-gradient(to right, transparent, black 20%); /* Soft edge on the left */
+}
+
+
+/* Footer Styles */
+footer{
+    background-color: var(--theme-surface);
+    padding: var(--space-xl) 0 var(--space-md);
+}
+
+.footerhome{
+    background-color: var(--white);
+    padding: var(--space-xl) 0 var(--space-md);
+    scroll-snap-align: end !important;    
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-xl);
+    padding-bottom: var(--space-xl);
+}
+
+.footer-main p,
+.footer-main a {
+    font-size: larger;
+    color: black;
+}
+
+span{
+    font-size: xx-large;
+}
+
+
+.footer-info .logo {
+    margin-bottom: var(--space-md);
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-description {
+    max-width: 500px;
+    margin-bottom: var(--space-lg);
+    opacity: 0.8;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.footer-social {
+    margin-top: var(--space-lg);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+}
+
+.footer-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm) var(--space-lg);
+    margin-top: var(--space-md);
+}
+
+.footer-services-grid a {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    transition: 0.3s ease;
+}
+
+.footer-services-grid a:hover {
+    opacity: 1;
+    color: var(--theme-accent);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(128, 128, 128, 0.05);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: var(--space-md);
+}
+
+@media (max-width: 1024px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}
+

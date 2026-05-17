@@ -1,0 +1,62 @@
+{
+    "theme": "ai-ml",
+    "meta": {
+        "division": "AI-ML",
+        "title": "Face Recognition System for Attendance and Security",
+        "heroImage": "https://images.unsplash.com/photo-xxx?auto=format&fit=crop&q=80&w=2070"
+    },
+    "summary": "Developed a real-time AI-powered face recognition system for automated attendance tracking and security monitoring. The system uses multi-camera video processing, face detection, face alignment, and vector similarity search for accurate identification and monitoring.",
+    "challenge": {
+        "description": "Manual attendance tracking is time-consuming, prone to errors, and lacks real-time monitoring capabilities. Integrating with existing security systems requires a scalable, high-accuracy solution that can handle multiple camera feeds and varying lighting conditions."
+    },
+    "techStack": [
+        "Python",
+        "OpenCV",
+        "InsightFace"
+    ],
+    "methodology": [
+        {
+            "step": "01",
+            "title": "Multi-Camera Integration",
+            "description": "Implemented a robust video processing pipeline to handle multiple camera feeds simultaneously, ensuring continuous monitoring with minimal latency."
+        },
+        {
+            "step": "02",
+            "title": "Face Detection & Alignment",
+            "description": "Leveraged state-of-the-art deep learning models for real-time face detection and alignment, ensuring accurate feature extraction even in challenging conditions."
+        },
+        {
+            "step": "03",
+            "title": "Embedding Extraction & Matching",
+            "description": "Implemented face embedding extraction using InsightFace and performed vector similarity search for rapid identification and matching against the enrolled database."
+        },
+        {
+            "step": "04",
+            "title": "Attendance & Alert System",
+            "description": "Developed an automated attendance tracking module with real-time alerts for unauthorized access or unrecognized faces, enhancing security and operational efficiency."
+        }
+    ],
+    "impact": [
+        {
+            "value": "90.0%",
+            "label": "Accuracy",
+            "description": "Achieved near-perfect accuracy through advanced face detection and embedding matching algorithms."
+        },
+        {
+            "value": "<1",
+            "label": "Identification Speed",
+            "description": "Identify individuals in under one second using efficient vector similarity search."
+        },
+        {
+            "value": "10+ Cameras",
+            "label": "Scalability",
+            "description": "Scalable architecture to support monitoring across multiple camera feeds simultaneously."
+        },
+        {
+            "value": "24/7",
+            "label": "Reliability",
+            "description": "Ensured continuous monitoring with minimal latency."
+        }
+    ],
+    "gallery": []
+}

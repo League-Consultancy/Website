@@ -1,0 +1,58 @@
+{
+  "theme": "mechanical",
+  "meta": {
+    "division": "DESIGN & FEA",
+    "client": "IN-HOUSE RESEARCH PROJECT",
+    "title": "Heat Dissipation Optimizing Design in 2D\nusing AI",
+    "heroImage": "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=2070"
+  },
+  "summary": "This project focuses on optimizing heat dissipation in a constrained 2D system using AI-driven design techniques. A Pareto-based genetic algorithm was implemented to balance thermal performance with manufacturing cost and complexity. The solution enables efficient thermal management while maintaining practical design feasibility.",
+  "challenge": {
+    "description": "Modern electronic and mechanical systems require efficient heat dissipation to maintain performance and prevent overheating, but traditional heat sink designs often increase material cost and manufacturing complexity. The key challenge was to balance thermal efficiency with production feasibility. Existing approaches lacked multi-objective optimization, making it difficult to simultaneously optimize heat transfer, cost, and design complexity."
+  },
+  "techStack": [
+    "Python",
+    "NumPy",
+    "Heat Simulation Model",
+    "Genetic Algorithm (NSGA-II)",
+    "Matplotlib"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "2D Thermal Grid Simulation",
+      "description": "Developed a 40x40 computational grid within an 80x80 plane, placing the heat source at the bottom and simulating heat propagation across the system using numerical heat transfer modeling."
+    },
+    {
+      "step": "02",
+      "title": "Genetic Algorithm Optimization",
+      "description": "Implemented a Pareto-based genetic algorithm with selection, crossover, and mutation operators. The system maintained elite solutions across 500 generations to evolve optimal heat dissipation structures."
+    },
+    {
+      "step": "03",
+      "title": "Manufacturing-Aware Refinement",
+      "description": "Integrated a manufacturing penalty function to reduce excessive material usage and complexity, refining the evolved designs to achieve a balanced trade-off between performance and production cost."
+    }
+  ],
+  "impact": [
+    {
+      "value": "45%",
+      "label": "REDUCTION IN MATERIAL USAGE",
+      "description": "Optimized designs reduced unnecessary structural complexity and material consumption through the inclusion of a manufacturing penalty function."
+    },
+    {
+      "value": "24/7",
+      "label": "AUTOMATED DESIGN EXPLORATION",
+      "description": "The AI-driven genetic algorithm enabled continuous, automated exploration of design possibilities without manual intervention."
+    },
+    {
+      "value": "0",
+      "label": "OVERHEATING FAILURES IN SIMULATION",
+      "description": "Final optimized designs consistently maintained safe thermal thresholds across simulated conditions."
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1581091870627-3a4c1c1f6a3b?auto=format&fit=crop&q=80&w=1000",
+    "https://images.unsplash.com/photo-1581091012184-5c6c0c1a6a1f?auto=format&fit=crop&q=80&w=1000"
+  ]
+}

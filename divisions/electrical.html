@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical | League Consultancy</title>
+    <link rel="stylesheet" href="../css/themes.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <header>    </header>
+
+    <main>
+        <!-- Division Hero -->
+        <section class="section-padding bg-surface" style="padding-top: var(--space-xl);">
+            <div class="container">
+                <p class="text-mono text-accent" id="hero-accent">Loading...</p>
+                <h1 style="font-size: 4rem; margin-top: var(--space-sm); white-space: pre-line;" id="hero-title">...</h1>
+                <p style="max-width: 600px; margin-top: var(--space-md); font-size: 1.2rem;" id="hero-description">
+                    ...
+                </p>
+            </div>
+        </section>
+
+        <!-- Capabilities Grid -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="text-accent text-mono" style="margin-bottom: var(--space-lg);">Core Capabilities</h2>
+                <div class="grid grid-3" id="capabilities-container">
+                    <!-- Capabilities will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Done / Portfolio -->
+        <section class="section-padding bg-surface">
+            <div class="container">
+                <h2 class="text-accent text-mono" style="margin-bottom: var(--space-lg);">Works Done</h2>
+                <div class="grid grid-2" id="projects-container">
+                    <!-- Projects will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section-padding" style="text-align: center;">
+            <div class="container" id="cta-container">
+                <h2 id="cta-title">Ready to collaborate?</h2>
+                <p style="margin: var(--space-md) 0;" id="cta-description">Get in touch with our experts.</p>
+                <a href="mailto:talkwith.league@gmail.com" class="btn" id="cta-button">Inquire Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        $(function() {
+            // Fetch data for this specific division
+            $.getJSON('data/electrical.json', function(data) {
+                // Set Theme
+                $('body').attr('data-theme', data.theme);
+
+                // Populate Hero
+                $('#hero-accent').text(data.hero.accentText);
+                $('#hero-title').text(data.hero.title);
+                $('#hero-description').text(data.hero.description);
+
+                // Populate Capabilities
+                let capabilitiesHtml = '';
+                data.capabilities.forEach(cap => {
+                    capabilitiesHtml += `
+                        <div class="bg-surface" style="padding: var(--space-md); border-left: 4px solid var(--theme-accent);">
+                            <h3 style="font-size: 1.2rem;">${cap.title}</h3>
+                            <p style="margin-top: var(--space-sm); font-size: 0.9rem;">${cap.description}</p>
+                        </div>`;
+                });
+                $('#capabilities-container').html(capabilitiesHtml);
+
+                // Populate Projects
+                let projectsHtml = '';
+                data.projects.forEach(proj => {
+                    projectsHtml += `
+                        <div style="background: white; border: 1px solid rgba(0,0,0,0.05); overflow: hidden;">
+                            <div style="height: 250px; background-image: url('${proj.image}'); background-size: cover; background-position: center;">
+                            </div>
+                            <div style="padding: var(--space-md);">
+                                <p class="text-mono text-accent" style="font-size: 0.8rem;">${proj.id}</p>
+                                <h3>${proj.title}</h3>
+                                <p style="margin-top: var(--space-sm); font-size: 0.9rem;">${proj.description}</p>
+                                <a href="${proj.link}" class="btn" style="margin-top: var(--space-sm); font-size: 0.8rem; padding: 0.5rem 1.2rem;">View Details</a>
+                            </div>
+                        </div>`;
+                });
+                $('#projects-container').html(projectsHtml);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "theme": "electrical",
+  "hero": {
+    "accentText": "Power Systems & Embedded Electronics",
+    "title": "Power Optimized",
+    "description": "Designing high-efficiency power distribution grids, custom PCB hardware architectures, and digital control systems for industrial and renewable energy networks."
+  },
+  "capabilities": [
+    {
+      "title": "Power Electronics & Conversion",
+      "description": "Designing high-efficiency switching topologies, buck-boost converters, and inverter circuits with optimized thermal management and low EMI."
+    },
+    {
+      "title": "Embedded Systems & Firmware",
+      "description": "Developing low-level microcontroller firmware for real-time sensor data acquisition, hardware-level interrupts, and communication protocols (I2C, SPI, CAN bus)."
+    },
+    {
+      "title": "Smart Grid & Automation",
+      "description": "Implementing decentralized telemetry networks, protective relay coordination, and automated fault detection, isolation, and service restoration (FDIR)."
+    }
+  ],
+  "projects": [
+    {
+      "id": "Project 01",
+      "title": "HTV Silicone Rubber Insulator Simulation",
+      "description": "This research project focuses on simulating electric field distribution in HTV silicone rubber polymer insulators under varying contamination and voltage conditions.",
+      "image": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&q=80&w=1000",
+      "link": "../project-template.html?div=electrical&id=Electrical_01_HTV"
+    }
+  ]
+}

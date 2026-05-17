@@ -1,0 +1,61 @@
+{
+  "theme": "automation",
+  "meta": {
+    "division": "AUTOMATION AND ROBOTICS",
+    "client": "ASE ANALYTICS LLP",
+    "title": "Tabletop Gantry",
+    "heroImage": "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=2070"
+  },
+  "summary": "The Tabletop Gantry project involved designing and developing a precision 3-axis motion system for automated ultrasonic cleaning applications. Built for ASE Analytics LLP, the system enhances workspace accessibility while maintaining high mechanical stability and accuracy. The solution significantly reduces manual intervention and improves consistency in laboratory automation tasks.",
+  "challenge": {
+    "description": "The client required a highly precise and cost-effective 3-axis automated motion system capable of performing ultrasonic cleaning tasks with repeatable accuracy. Existing setups lacked proper workspace accessibility, especially for handling labware such as beakers, limiting usability and operational efficiency. Additionally, ensuring structural rigidity while maintaining a modular, scalable, and low-complexity design was a key engineering challenge."
+  },
+  "techStack": [
+    "Arduino Mega 2560",
+    "ANSYS Simulation",
+    "Siemens NX",
+    "NEMA Stepper Motors",
+    "DRV8825 Motor Drivers",
+    "Aluminum Extrusion System",
+    "LM8UU Linear Bearings",
+    "Stainless Steel Lead Screws"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "Mechanical Design & System Architecture",
+      "description": "Developed a modular aluminum extrusion-based gantry structure with elevated legs to improve workspace accessibility. Structural simulations were performed to ensure rigidity, stability, and reduced vibration during precision operations."
+    },
+    {
+      "step": "02",
+      "title": "Motion System Development",
+      "description": "Integrated NEMA stepper motors with stainless steel lead screws and LM8UU bearings to enable smooth, accurate, and repeatable motion across X, Y, and Z axes. Dual acrylic trays were incorporated for flexible labware handling."
+    },
+    {
+      "step": "03",
+      "title": "Electronics Integration & Control",
+      "description": "Implemented an Arduino Mega 2560-based control system with DRV8825 drivers and a 24V power supply for reliable motion control. A zero-crossing optocoupler and triac circuit were used to safely manage ultrasonic cleaning operations."
+    }
+  ],
+  "impact": [
+    {
+      "value": "High",
+      "label": "PRECISION & STABILITY",
+      "description": "Achieved improved mechanical stability through reinforced aluminum structure and optimized motion components, ensuring consistent and accurate operation."
+    },
+    {
+      "value": "Enhanced",
+      "label": "WORKSPACE ACCESSIBILITY",
+      "description": "Elevated gantry design significantly improved access to the workspace, making it easier to handle beakers and lab equipment during operations."
+    },
+    {
+      "value": "Reduced",
+      "label": "MANUAL INTERVENTION",
+      "description": "Automation of ultrasonic cleaning processes reduced manual effort and improved operational efficiency and repeatability."
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1000",
+    "https://images.unsplash.com/photo-1581091870622-2c2b1d3c6a3c?auto=format&fit=crop&q=80&w=1000"
+  ]
+}

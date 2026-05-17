@@ -1,0 +1,60 @@
+{
+  "theme": "drone",
+  "meta": {
+    "division": "DRONE DIVISION",
+    "client": "IN-HOUSE PROJECT",
+    "title": "Autonomous Under-Water Drone\nHigh Mobility Exploration System",
+    "heroImage": ""
+  },
+  "summary": "This project involved the design and development of an autonomous underwater drone capable of operating in challenging aquatic environments with high manoeuvrability and structural stability. Engineered with high-speed BLDC propulsion, six degrees of freedom, and a pressure-resistant body, the system was developed for underwater exploration, inspection, and surveillance applications. The drone demonstrated strong performance during Robofest 3.0, achieving recognition among the top-performing teams in a highly competitive environment.",
+  "challenge": {
+    "description": "The project required the development of a compact underwater robotic platform capable of maintaining stability, navigation accuracy, and reliable control in low-visibility and dynamic underwater environments. Major engineering challenges included waterproofing and pressure resistance for deep-water operation, integrating power management and communication systems within limited space, and achieving precise multi-directional movement in confined underwater areas. Additionally, the drone needed to meet strict Robofest 3.0 competition specifications while being developed within constrained timelines and resources."
+  },
+  "techStack": [
+    "Raspberry Pi",
+    "BLDC Motors",
+    "ANSYS",
+    "Siemens NX",
+    "Embedded Control Systems",
+    "Underwater Propulsion Systems",
+    "Pressure-Resistant Mechanical Design",
+    "Remote Navigation Systems",
+    "Power Management Systems",
+    "6-DOF Motion Control"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "Mechanical Design & Structural Simulation",
+      "description": "Designed an ellipsoid-shaped underwater drone structure optimized for hydrodynamic movement, reduced drag, and improved operational stability. Performed structural and pressure analysis using ANSYS and Siemens NX to ensure underwater durability up to 20 meters depth."
+    },
+    {
+      "step": "02",
+      "title": "Embedded Systems & Propulsion Integration",
+      "description": "Integrated Raspberry Pi-based embedded control systems with high-speed BLDC propulsion units to achieve precise underwater manoeuvrability and six degrees of freedom motion control. Implemented onboard power management and remote operation capabilities for mission flexibility."
+    },
+    {
+      "step": "03",
+      "title": "Testing, Navigation & Competition Deployment",
+      "description": "Conducted underwater testing for navigation accuracy, stability, and confined-space operation. Optimized the drone for Robofest 3.0 competition tasks involving underwater exploration, obstacle navigation, and operational reliability in dynamic aquatic conditions."
+    }
+  ],
+  "impact": [
+    {
+      "value": "TOP 20",
+      "label": "COMPETITION RANKING",
+      "description": "Ranked among the top 20 teams out of 200 participating teams in the Robofest 3.0 underwater robotics category."
+    },
+    {
+      "value": "20M",
+      "label": "UNDERWATER OPERATING DEPTH",
+      "description": "Engineered a pressure-resistant underwater system capable of operating reliably at depths of up to 20 meters."
+    },
+    {
+      "value": "6-DOF",
+      "label": "ADVANCED MANOEUVRABILITY",
+      "description": "Enabled precise six degrees of freedom motion control for navigation through narrow underwater passages and confined spaces."
+    }
+  ],
+  "gallery": []
+}

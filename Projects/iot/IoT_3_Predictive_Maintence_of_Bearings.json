@@ -1,0 +1,62 @@
+{
+  "theme": "iot",
+  "meta": {
+    "division": "IOT & EMBEDDED",
+    "client": "IN-HOUSE PROJECT",
+    "title": "ROTOIQ\nAI-Powered Predictive Maintenance",
+    "heroImage": ""
+  },
+  "summary": "ROTOIQ is an AI-powered predictive maintenance platform designed to monitor rotating industrial machinery through real-time vibration and temperature analysis. By combining industrial IoT data acquisition with proprietary machine learning models, the system identifies bearing faults and mechanical anomalies weeks before critical failure occurs. The platform enables industries to shift from reactive maintenance to a proactive, data-driven operational strategy that minimizes downtime, extends asset lifespan, and reduces emergency repair costs.",
+  "challenge": {
+    "description": "Industrial facilities face significant financial and operational losses due to unplanned equipment downtime, with bearing failures accounting for nearly half of all rotating machinery breakdowns. Traditional maintenance approaches rely heavily on scheduled inspections or reactive repairs, often failing to detect micro-level anomalies before catastrophic failure occurs. The challenge was to develop a scalable AI-driven system capable of continuously processing vibration and thermal telemetry data in real time, accurately classifying bearing-specific faults, estimating remaining useful life (RUL), and delivering actionable maintenance alerts with sufficient lead time for intervention. The platform also required rapid deployment capabilities with minimal infrastructure modifications across diverse industrial environments."
+  },
+  "techStack": [
+    "Industrial Vibration Sensors",
+    "Temperature Monitoring Sensors",
+    "Machine Learning Models",
+    "Time-Series Data Analytics",
+    "Predictive Maintenance Algorithms",
+    "Real-Time Telemetry Processing",
+    "Fault Classification Engine",
+    "Remaining Useful Life (RUL) Estimation",
+    "Industrial IoT Infrastructure",
+    "Cloud-Based Monitoring Dashboard",
+    "Email & SMS Alert Systems",
+    "API Integration Framework"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "Industrial Data Acquisition",
+      "description": "Implemented real-time vibration and temperature monitoring using industrial-grade sensors integrated with rotating machinery systems. Established continuous telemetry pipelines for capturing high-frequency operational data under varying industrial load conditions."
+    },
+    {
+      "step": "02",
+      "title": "AI-Based Fault Detection & Analysis",
+      "description": "Developed proprietary machine learning models capable of analyzing time-series vibration signatures to identify anomalies, classify bearing-specific faults, evaluate fault severity, and estimate Remaining Useful Life (RUL) before equipment failure."
+    },
+    {
+      "step": "03",
+      "title": "Predictive Alerting & Operational Intelligence",
+      "description": "Built an intelligent notification and monitoring framework delivering real-time alerts through dashboards, email, SMS, and APIs. Enabled maintenance teams to schedule interventions proactively, align repairs with production windows, and reduce unplanned operational disruptions."
+    }
+  ],
+  "impact": [
+    {
+      "value": "45%",
+      "label": "DOWNTIME REDUCTION",
+      "description": "Achieved significant reduction in unplanned machinery downtime during early deployment stages through AI-driven predictive maintenance strategies."
+    },
+    {
+      "value": "2-4W",
+      "label": "EARLY FAULT DETECTION WINDOW",
+      "description": "Enabled detection of bearing degradation and rotating machinery anomalies up to four weeks before critical failure events."
+    },
+    {
+      "value": "4.8×",
+      "label": "MAINTENANCE COST OPTIMIZATION",
+      "description": "Reduced dependency on expensive reactive maintenance processes by enabling proactive intervention and precision scheduling."
+    }
+  ],
+  "gallery": []
+}

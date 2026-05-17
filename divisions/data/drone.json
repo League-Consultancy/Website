@@ -1,0 +1,38 @@
+{
+  "theme": "drone", 
+  "hero": {
+    "accentText": "Unmanned Aerial Systems & Avionics",
+    "title": "Autonomy Elevated",
+    "description": "Developing robust Unmanned Aerial Vehicles (UAVs), custom flight control firmware, and intelligent aerial edge-computing payloads for high-endurance operations."
+  },
+  "capabilities": [
+    {
+      "title": "Avionics & Flight Controls",
+      "description": "Configuring, tuning, and compiling custom ArduPilot or PX4 autopilot firmware for custom multirotor and fixed-wing UAV configurations."
+    },
+    {
+      "title": "Aerial Edge AI & Vision",
+      "description": "Integrating onboard companion computers (Jetson series) for real-time target tracking, optical flow localization, and obstacle avoidance."
+    },
+    {
+      "title": "Structural & Propulsion Tuning",
+      "description": "Optimizing thrust-to-weight ratios, carbon fiber chassis layout, and electronic speed controller (ESC) telemetry for high-efficiency flight profiles."
+    }
+  ],
+  "projects": [
+    {
+      "id": "Project 01",
+      "title": "Aerial Robotics Minefield Navigation Drone",
+      "description": "This project presents a ROS2-enabled autonomous aerial drone system designed for minefield navigation and detection using multi-sensor fusion.",
+      "image": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=1000",
+      "link": "../project-template.html?div=drone&id=Drone_02_Swarm"
+    },
+    {
+      "id": "Project 02",
+      "title": "Autonomous Under-Water Drone High Mobility Exploration System",
+      "description": "This project involved the design and development of an autonomous underwater drone capable of operating in challenging aquatic environments with high manoeuvrability and structural stability.",
+      "image": "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=1000",
+      "link": "../project-template.html?div=drone&id=Drone_01_Underwater"
+    }
+  ]
+}

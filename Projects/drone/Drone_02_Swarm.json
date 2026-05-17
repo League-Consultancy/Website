@@ -1,0 +1,63 @@
+{
+  "theme": "drone",
+  "meta": {
+    "division": "DRONE",
+    "client": "In-house Project",
+    "title": "Aerial Robotics\nMinefield Navigation Drone",
+    "heroImage": "https://images.unsplash.com/photo-xxx?auto=format&fit=crop&q=80&w=2070"
+  },
+  "summary": "This project presents a ROS2-enabled autonomous aerial drone system designed for minefield navigation and detection using multi-sensor fusion. It integrates computer vision, thermal imaging, and LiDAR-like ToF sensing with swarm coordination for safe and efficient terrain scanning.",
+  "challenge": {
+    "description": "The primary challenge was designing a lightweight autonomous aerial system capable of reliable mine detection and safe navigation in GPS-enabled and GPS-denied conditions. Existing systems lacked multi-sensor fusion, real-time swarm coordination, and robust fail-safe control between autonomous and manual override modes, limiting operational safety and scalability."
+  },
+  "techStack": [
+    "ROS2",
+    "ArduPilot (ArduCopter)",
+    "Raspberry Pi 5",
+    "SpeedyBee F405 Flight Controller Stack",
+    "MAVLink / MAVROS",
+    "OpenCV",
+    "Python",
+    "Computer Vision (AI/ML pipelines)",
+    "Wi-Fi Mesh Networking",
+    "Gazebo / Simulation Tools"
+  ],
+  "methodology": [
+    {
+      "step": "01",
+      "title": "System Design & Hardware Integration",
+      "description": "Designed a lightweight ABS 3D-printed drone frame optimized for thrust-to-weight ratio and vibration resistance. Integrated propulsion system (Foxeer Datura motors, Gemfan propellers), power system (Li-ion 21700 cells, UBEC), and sensor suite including GPS, ToF, thermal, and spectral sensors."
+    },
+    {
+      "step": "02",
+      "title": "Embedded Systems & Autonomy Architecture",
+      "description": "Implemented dual-layer architecture using ArduPilot on flight controller for stabilization and Raspberry Pi 5 for autonomy. Established MAVLink communication via MAVROS and integrated ROS2 nodes for gesture detection, mine detection, and obstacle avoidance."
+    },
+    {
+      "step": "03",
+      "title": "Swarm Intelligence & Mission Execution",
+      "description": "Developed ROS2-based swarm networking over Wi-Fi mesh with master election protocol for coordination. Implemented grid-based mapping, multi-sensor fusion for mine detection, and autonomous path planning with operator guidance using vision and distance sensing."
+    }
+  ],
+  "impact": [
+    {
+      "value": "18 min",
+      "label": "MAX FLIGHT TIME",
+      "description": "Achieved extended endurance using high-density Li-ion battery configuration and efficient 4-inch bi-blade propulsion system optimized for low power draw."
+    },
+    {
+      "value": "2:1",
+      "label": "THRUST TO WEIGHT RATIO",
+      "description": "Maintained strong lift efficiency, enabling stable hover and payload handling for multi-sensor autonomous operations."
+    },
+    {
+      "value": "Swarm-ready",
+      "label": "SYSTEM SCALABILITY",
+      "description": "ROS2-based distributed architecture enables multi-drone coordination for area coverage, mapping, and cooperative mission execution."
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-yyy?auto=format&fit=crop&q=80&w=1000",
+    "https://images.unsplash.com/photo-zzz?auto=format&fit=crop&q=80&w=1000"
+  ]
+}

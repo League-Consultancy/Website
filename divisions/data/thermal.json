@@ -1,0 +1,31 @@
+{
+  "theme": "thermal",
+  "hero": {
+    "accentText": "Thermodynamics & Fluid Dynamics",
+    "title": "Energy Optimized",
+    "description": "Designing high-efficiency heat exchangers, advanced cooling systems, and specialized thermal management configurations to maximize energy utilization and system reliability."
+  },
+  "capabilities": [
+    {
+      "title": "Conduction & Convection Modeling",
+      "description": "Analyzing complex heat transfer interfaces, designing optimized fin geometries, and calculating fluid velocity profiles for forced and natural convection cooling."
+    },
+    {
+      "title": "Computational Fluid Dynamics (CFD)",
+      "description": "Simulating high-fidelity conjugate heat transfer (CHT) models, multiphase fluid interactions, and boundary layer behaviors to eliminate thermal hot spots."
+    },
+    {
+      "title": "HVAC & Power Plant Systems",
+      "description": "Optimizing industrial steam cycles, gas turbine dynamics, refrigeration systems, and large-scale psychrometric processes for maximum thermodynamic efficiency."
+    }
+  ],
+  "projects": [
+    {
+      "id": "Project 01",
+      "title": "Electric Induction Boiler System",
+      "description": "This project focuses on the design and implementation of a 50 kg/hr electric induction boiler system to replace the existing LDO-fired boiler at Attach Industries.",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000",
+      "link": "../project-template.html?div=thermal&id=Thermal_01_Induction_Boiler"
+    }
+  ]
+}
