@@ -268,7 +268,7 @@ span{
 
 .footer-services-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--space-sm) var(--space-lg);
     margin-top: var(--space-md);
 }
@@ -290,7 +290,7 @@ span{
     align-items: center;
     padding-top: var(--space-md);
     border-top: 1px solid rgba(128, 128, 128, 0.05);
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.05em;
     opacity: 0.5;
