@@ -4,18 +4,22 @@
   "hero": {
     "accentText": "Thermodynamics & Fluid Dynamics",
     "title": "Energy Optimized",
-    "description": "Designing high-efficiency heat exchangers, advanced cooling systems, and specialized thermal management configurations to maximize energy utilization and system reliability."
+    "description": "Designing high-efficiency heat exchangers, advanced cooling systems, and specialized thermal management configurations to maximize energy utilization and system reliability.",
+    "image": "../assets/divisions/Advance_Thermal_Systems.png"
   },
   "capabilities": [
     {
+      "icon":"../assets/conduction.png",
       "title": "Conduction & Convection Modeling",
       "description": "Analyzing complex heat transfer interfaces, designing optimized fin geometries, and calculating fluid velocity profiles for forced and natural convection cooling."
     },
     {
+      "icon":"../assets/cfd.png",
       "title": "Computational Fluid Dynamics (CFD)",
       "description": "Simulating high-fidelity conjugate heat transfer (CHT) models, multiphase fluid interactions, and boundary layer behaviors to eliminate thermal hot spots."
     },
     {
+      "icon":"../assets/hvac.png",
       "title": "HVAC & Power Plant Systems",
       "description": "Optimizing industrial steam cycles, gas turbine dynamics, refrigeration systems, and large-scale psychrometric processes for maximum thermodynamic efficiency."
     }

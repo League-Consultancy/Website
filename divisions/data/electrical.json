@@ -4,18 +4,22 @@
   "hero": {
     "accentText": "Power Systems & Embedded Electronics",
     "title": "Power Optimized",
-    "description": "Designing high-efficiency power distribution grids, custom PCB hardware architectures, and digital control systems for industrial and renewable energy networks."
+    "description": "Designing high-efficiency power distribution grids, custom PCB hardware architectures, and digital control systems for industrial and renewable energy networks.",
+    "image": "../assets/divisions/electrical.png"
   },
   "capabilities": [
     {
+      "icon":"../assets/power-electronics.png",
       "title": "Power Electronics & Conversion",
       "description": "Designing high-efficiency switching topologies, buck-boost converters, and inverter circuits with optimized thermal management and low EMI."
     },
     {
+      "icon":"../assets/processor.png",
       "title": "Embedded Systems & Firmware",
       "description": "Developing low-level microcontroller firmware for real-time sensor data acquisition, hardware-level interrupts, and communication protocols (I2C, SPI, CAN bus)."
     },
     {
+      "icon":"../assets/smart-grid.png",
       "title": "Smart Grid & Automation",
       "description": "Implementing decentralized telemetry networks, protective relay coordination, and automated fault detection, isolation, and service restoration (FDIR)."
     }

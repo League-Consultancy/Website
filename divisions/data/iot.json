@@ -4,18 +4,22 @@
   "hero": {
     "accentText": "Internet of Things & Edge Computing",
     "title": "Ecosystems Connected",
-    "description": "Engineering end-to-end IoT architectures, low-power sensor nodes, and real-time data streaming pipelines to bridge physical hardware with cloud intelligence."
+    "description": "Engineering end-to-end IoT architectures, low-power sensor nodes, and real-time data streaming pipelines to bridge physical hardware with cloud intelligence.",
+    "image": "../assets/divisions/IOT.jpeg"
   },
   "capabilities": [
     {
+      "icon":"../assets/processor.png",
       "title": "Edge Computing & Firmware",
       "description": "Developing optimized C/C++ firmware for resource-constrained microcontrollers, leveraging RTOS environments and low-power sleep states."
     },
     {
+      "icon": "../assets/telemetry.png",
       "title": "Mesh & Telemetry Protocols",
       "description": "Implementing robust M2M communication pipelines using lightweight network protocols including MQTT, CoAP, HTTP REST, and ESP-NOW/LoRaWAN mesh networks."
     },
     {
+      "icon": "../assets/cloud.png",
       "title": "Cloud Integration & Analytics",
       "description": "Architecting scalable backend infrastructure with time-series databases and real-time WebSockets for telemetry ingestion, data visualization, and remote device management."
     }

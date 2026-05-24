@@ -4,20 +4,24 @@
   "hero": {
     "accentText": "Production-Grade AI/ML Solutions",
     "title": "Intelligence Redefined",
-    "description": "Bridging academic theory and production-ready code. Building scalable architectures, advanced computer vision systems, and intelligent automation frameworks."
+    "description": "Bridging academic theory and production-ready code. Building scalable architectures, advanced computer vision systems, and intelligent automation frameworks.",
+    "image": "../assets/divisions/ai-ml.png"
   },
   "capabilities": [
     {
+      "icon": "../assets/computer-vision.png",
       "title": "Advanced Computer Vision",
       "description": "Implementing robust face-recognition, detection, and tracking pipelines using state-of-the-art frameworks like RetinaFace and ArcFace."
     },
     {
+      "icon": "../assets/LLM.png",
       "title": "LLM & SLM Architectures",
       "description": "Designing and deploying optimized Large/Small Language Models and Mixture-of-Experts (MoE) configurations for complex text generation and data synthesis."
     },
     {
-      "title": "Intelligent CAD Automation",
-      "description": "Engineering innovative prompt-to-CAD systems that translate natural language specifications into accurate parametric 3D geometric models."
+      "icon": "../assets/agents.png",
+      "title": "Agentic AI Systems",
+      "description": "Developing autonomous AI agents capable of performing complex, multi-step tasks independently."
     }
   ],
   "projects": [

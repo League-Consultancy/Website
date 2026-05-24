@@ -4,18 +4,22 @@
   "hero": {
     "accentText": "Advanced Robotics & Industrial Automation",
     "title": "Precision Automated",
-    "description": "Designing intelligent mechatronic systems, autonomous robotic arms, and industrial PLC pipelines to optimize manufacturing efficiency and eliminate operational friction."
+    "description": "Designing intelligent mechatronic systems, autonomous robotic arms, and industrial PLC pipelines to optimize manufacturing efficiency and eliminate operational friction.",
+    "image": "../assets/divisions/automation.png"
   },
   "capabilities": [
     {
+      "icon": "../assets/kinematics.png",
       "title": "Mechatronics & Kinematics",
       "description": "Designing multi-axis robotic arms and calculating forward/inverse kinematics for precise spatial positioning and handling."
     },
     {
+      "icon":"../assets/control-system.png",
       "title": "Industrial Control Systems",
       "description": "Implementing robust SCADA and PLC programming (Structured Text/Ladder Logic) for real-time telemetry and industrial line automation."
     },
     {
+      "icon":"../assets/autonomous-vehicle.png",
       "title": "Autonomous Navigation & ROS",
       "description": "Developing LiDAR-based SLAM, path planning algorithms, and ROS-driven architectures for Automated Guided Vehicles (AGVs)."
     }

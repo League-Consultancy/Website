@@ -4,18 +4,22 @@
   "hero": {
     "accentText": "Precise Engineering",
     "title": "Where Accuracy Meets Innovation",
-    "description": "Engineering high-precision mechanical systems, complex geometric assemblies, and manufacturing-ready documentation leveraging advanced parametric CAD and simulation frameworks."
+    "description": "Engineering high-precision mechanical systems, complex geometric assemblies, and manufacturing-ready documentation leveraging advanced parametric CAD and simulation frameworks.",
+    "image": "../assets/divisions/Precise Engineering.jpeg"
   },
   "capabilities": [
     {
+      "icon":"../assets/CAD.png",
       "title": "Parametric CAD & Modeling",
       "description": "Developing robust 3D parts, complex surface geometry, and large scale assemblies using industry-standard parametric design principles."
     },
     {
+      "icon":"../assets/draft.png",
       "title": "GD&T & Engineering Drafts",
       "description": "Applying strict Geometric Dimensioning and Tolerancing (GD&T) standards to production blueprints to ensure flawless assembly and manufacturing alignment."
     },
     {
+      "icon":"../assets/dfm.png",
       "title": "DFM & DFA Optimization",
       "description": "Optimizing complex structural components for Design for Manufacturing (DFM) and Design for Assembly (DFA) to minimize material waste and production cycles."
     }
