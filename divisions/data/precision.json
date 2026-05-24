@@ -1,8 +1,9 @@
 {
+  "name": "Precise Engineering",
   "theme": "mechanical", 
   "hero": {
-    "accentText": "Mechanical Design & Parametric Engineering",
-    "title": "Form Follows Function",
+    "accentText": "Precise Engineering",
+    "title": "Where Accuracy Meets Innovation",
     "description": "Engineering high-precision mechanical systems, complex geometric assemblies, and manufacturing-ready documentation leveraging advanced parametric CAD and simulation frameworks."
   },
   "capabilities": [

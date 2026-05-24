@@ -1,9 +1,10 @@
 {
+  "name": "UXV Integrated Systems",
   "theme": "drone", 
   "hero": {
-    "accentText": "Unmanned Aerial Systems & Avionics",
-    "title": "Autonomy Elevated",
-    "description": "Developing robust Unmanned Aerial Vehicles (UAVs), custom flight control firmware, and intelligent aerial edge-computing payloads for high-endurance operations."
+    "accentText": "UXV Integrated Systems",
+    "title": "Where Innovation Takes Flight",
+    "description": "Unified UAV, UGV, USV, and UUV platforms for autonomous multi-domain operations."
   },
   "capabilities": [
     {
