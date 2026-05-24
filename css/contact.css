@@ -1,0 +1,170 @@
+/* League Consultancy - Contact Page Styles */
+
+.contact-section {
+    padding: var(--space-xl) 0 var(--space-lg);
+    background-color: var(--white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-xl);
+    align-items: start;
+    margin-top: var(--space-md);
+}
+
+/* Left Column: Info */
+.contact-info-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+    color: var(--theme-text);
+}
+
+.contact-info-desc {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: var(--space-md);
+    max-width: 500px;
+}
+
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    background-color: var(--theme-surface);
+    border-left: 4px solid var(--theme-accent);
+}
+
+.info-card-icon {
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.info-card-content h4 {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    margin-bottom: 4px;
+}
+
+.info-card-content p,
+.info-card-content a {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.info-card-content a:hover {
+    color: var(--theme-accent);
+}
+
+.map-container {
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgba(0,0,0,0.05);
+    background-color: var(--theme-surface);
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(1) invert(0.05) contrast(1.1); /* Stylized darkish technical map overlay */
+}
+
+/* Right Column: Form */
+.contact-form-container {
+    background-color: var(--theme-surface);
+    padding: var(--space-lg);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.form-title {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--white);
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: var(--theme-accent);
+}
+
+/* Success Banner */
+.success-banner {
+    display: none;
+    background-color: var(--theme-surface);
+    border: 1px solid var(--theme-border);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+    align-items: center;
+    gap: var(--space-sm);
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.success-banner.active {
+    display: flex;
+}
+
+.success-icon {
+    color: var(--theme-accent);
+    font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}

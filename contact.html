@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | League Consultancy</title>
+    <meta name="description" content="Get in touch with League Consultancy experts.">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body data-theme="home">
+
+    <header></header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Left: Info & Map -->
+                    <div>
+                        <p class="text-mono text-accent">GET IN TOUCH</p>
+                        <h2 class="contact-info-title">Let's Build<br>Something Great.</h2>
+                        <p class="contact-info-desc">
+                            Reach out to our multi-disciplinary engineering teams to discuss custom AI systems, hardware design, or industrial automation.
+                        </p>
+
+                        <div class="info-cards">
+                            <!-- Email -->
+                            <div class="info-card">
+                                <span class="info-card-icon"><img src="assets/email-svgrepo-com.svg" style="height: 24px; width: auto;" alt="Email"></span>
+                                <div class="info-card-content">
+                                    <h4 class="text-mono text-accent">EMAIL</h4>
+                                    <p><a href="mailto:info@leagueconsultancy.com">info@leagueconsultancy.com</a></p>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="info-card">
+                                <span class="info-card-icon"><img src="assets/location-pin-svgrepo-com.svg" style="height: 24px; width: auto;" alt="Location"></span>
+                                <div class="info-card-content">
+                                    <h4 class="text-mono text-accent">LOCATION</h4>
+                                    <p style="color: black;">Ahmedabad, Gujarat, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map -->
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117507.80572714243!2d72.5085994468694!3d23.022356191769493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fccd11d087798c1!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1716500000000!5m2!1sen!2sin" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="contact-form-container">
+                        <h2 class="form-title text-mono">Send a Message</h2>
+                        
+                        <!-- Success Alert -->
+                        <div class="success-banner" id="success-alert">
+                            <span class="success-icon text-mono">✓</span>
+                            <div>
+                                <h4 class="text-mono" style="margin: 0; color: var(--theme-text);">MESSAGE SENT SECURELY</h4>
+                                <p style="margin: 4px 0 0; font-size: 0.9rem; opacity: 0.8;">Thank you. Our experts will contact you within 24 hours.</p>
+                            </div>
+                        </div>
+
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label class="form-label text-mono" for="name">NAME</label>
+                                <input class="form-input" type="text" id="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label text-mono" for="email">EMAIL ADDRESS</label>
+                                <input class="form-input" type="email" id="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label text-mono" for="subject">SUBJECT</label>
+                                <input class="form-input" type="text" id="subject" required placeholder="Project Inquiry">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label text-mono" for="message">MESSAGE</label>
+                                <textarea class="form-textarea" id="message" required placeholder="Describe your technical requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-highlight text-mono" style="margin-top: 10px; width: 100%;">SUBMIT GATEWAY</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(function() {
+            $('#contact-form').on('submit', function(e) {
+                e.preventDefault();
+                
+                // Show success feedback
+                $('#success-alert').addClass('active');
+                
+                // Reset form fields
+                $('#contact-form')[0].reset();
+                
+                // Scroll to alert
+                $('html, body').animate({
+                    scrollTop: $('#success-alert').offset().top - 120
+                }, 400);
+            });
+        });
+    </script>
+</body>
+
+</html>

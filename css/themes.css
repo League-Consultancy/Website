@@ -63,14 +63,6 @@
     --theme-border: #38B000;
 }
 
-[data-theme="robotics"] {
-    --theme-bg: var(--white);
-    --theme-text: var(--black);
-    --theme-accent: #FB8500;
-    --theme-surface: #FFF3E6;
-    --theme-border: #FB8500;
-}
-
 [data-theme="ai-ml"] {
     --theme-bg: var(--white);
     --theme-text: var(--black);
