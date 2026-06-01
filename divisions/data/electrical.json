@@ -29,7 +29,7 @@
       "id": "Project 01",
       "title": "HTV Silicone Rubber Insulator Simulation",
       "description": "This research project focuses on simulating electric field distribution in HTV silicone rubber polymer insulators under varying contamination and voltage conditions.",
-      "image": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&q=80&w=1000",
+      "image": "../assets/Projects/Electrical-HTV.jpeg",
       "link": "../project-template.html?div=electrical&id=Electrical_01_HTV"
     }
   ]

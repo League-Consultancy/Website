@@ -29,21 +29,21 @@
       "id": "Project 01",
       "title": "Closed-Loop 6-DOF Antenna Positioning Control System",
       "description": "Developing a high-precision closed-loop 6-DOF control system for antenna positioning used in satellite and aerospace applications.",
-      "image": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=80&w=1000",
+      "image": "../assets/Projects/ISRO-Payload.png",
       "link": "../project-template.html?div=automation-robotics&id=AR_01_Close_Loop"
     },
     {
       "id": "Project 02",
       "title": "Payload Control and Tracking Unit (PCTU) E2.2",
       "description": "The Payload Control and Tracking Unit (PCTU) is a next-generation closed-loop tracking system designed for highly precise spacecraft-to-ground optical communication.",
-      "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1000",
+      "image": "../assets/Projects/Payload-control.jpeg",
       "link": "../project-template.html?div=automation-robotics&id=AR_02_Antenna_Close_Loop"
     },
     {
       "id": "Project 03",
       "title": "Table Top Gantry System",
       "description": "Tabletop Gantry is a precision 3-axis motion system for ultrasonic cleaning applications.",
-      "image": "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&q=80&w=1000",
+      "image": "../assets/Projects/Table-Top.jpeg",
       "link": "../project-template.html?div=automation-robotics&id=AR_03_Table_Top"
     }
   ]

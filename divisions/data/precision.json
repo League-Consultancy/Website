@@ -29,15 +29,15 @@
       "id": "Project 01",
       "title": "Plate Thickness Optimization and\nVibration Analysis of Platform Plate ",
       "description": "This project focuses on optimizing the thickness of a platform plate supporting a dust suppression cannon using finite element analysis.",
-      "image": "https://images.unsplash.com/photo-1581092162384-868722622869?auto=format&fit=crop&q=80&w=1000",
+      "image": "../assets/Projects/Precise-Platform.png",
       "link": "../project-template.html?div=design&id=Design_01_Platform"
     },
     {
       "id": "Project 02",
       "title": "Heat Dissipation Optimizing Design in 2D",
       "description": "This project focuses on optimizing heat dissipation in a constrained 2D system using AI-driven design techniques.",
-      "image": "https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?auto=format&fit=crop&q=80&w=1000",
+      "image": "../assets/Projects/Heat_Sink.png",
       "link": "../project-template.html?div=design&id=Design_02_Heat_Sink"
     }
-  ]
+  ] 
 }
