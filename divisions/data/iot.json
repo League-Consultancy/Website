@@ -43,7 +43,7 @@
       "id": "Project 03",
       "title": "AI-Powered Predictive Maintenance",
       "description": "This project is an AI-powered predictive maintenance platform designed to monitor rotating industrial machinery through real-time vibration and temperature analysis.",
-      "image": "../assets/Projects/IIOT_AI.png",
+      "image": "../assets/Projects/ROTO-IQ.png",
       "link": "../project-template.html?div=iot&id=IoT_3_Predictive_Maintence_of_Bearings"
     }
   ]

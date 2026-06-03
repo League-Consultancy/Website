@@ -14,12 +14,12 @@
       "description": "Designing multi-axis robotic arms and calculating forward/inverse kinematics for precise spatial positioning and handling."
     },
     {
-      "icon":"../assets/control-system.png",
+      "icon": "../assets/control-system.png",
       "title": "Industrial Control Systems",
       "description": "Implementing robust SCADA and PLC programming (Structured Text/Ladder Logic) for real-time telemetry and industrial line automation."
     },
     {
-      "icon":"../assets/autonomous-vehicle.png",
+      "icon": "../assets/autonomous-vehicle.png",
       "title": "Autonomous Navigation & ROS",
       "description": "Developing LiDAR-based SLAM, path planning algorithms, and ROS-driven architectures for Automated Guided Vehicles (AGVs)."
     }
@@ -29,14 +29,14 @@
       "id": "Project 01",
       "title": "Closed-Loop 6-DOF Antenna Positioning Control System",
       "description": "Developing a high-precision closed-loop 6-DOF control system for antenna positioning used in satellite and aerospace applications.",
-      "image": "../assets/Projects/ISRO-Payload.png",
+      "image": "../assets/Projects/Payload-control.jpeg",
       "link": "../project-template.html?div=automation-robotics&id=AR_01_Close_Loop"
     },
     {
       "id": "Project 02",
       "title": "Payload Control and Tracking Unit (PCTU) E2.2",
       "description": "The Payload Control and Tracking Unit (PCTU) is a next-generation closed-loop tracking system designed for highly precise spacecraft-to-ground optical communication.",
-      "image": "../assets/Projects/Payload-control.jpeg",
+      "image": "../assets/Projects/ISRO-Payload.png",
       "link": "../project-template.html?div=automation-robotics&id=AR_02_Antenna_Close_Loop"
     },
     {
