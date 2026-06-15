@@ -26,17 +26,13 @@
 
     <main>
         <!-- Division Hero -->
-        <section class="portal-section"
-            style="height: 75vh; scroll-snap-align: none; background-color: var(--theme-surface);">
-            <div class="portal-content" style="padding-left: var(--space-md);">
+        <section class="portal-section division-hero">
+            <div class="portal-content">
                 <p class="text-mono text-accent" id="hero-accent">Loading...</p>
-                <h1 style="font-size: 3.5rem; margin-top: var(--space-sm); white-space: pre-line;" id="hero-title">...
-                </h1>
-                <p style="max-width: 600px; margin-top: var(--space-md); font-size: 1.2rem;" id="hero-description">
-                    ...
-                </p>
+                <h1 id="hero-title">...</h1>
+                <p id="hero-description">...</p>
             </div>
-            <div class="portal-image" id="hero-image" style="top: 80px; height: calc(100% - 80px);"></div>
+            <div class="portal-image" id="hero-image"></div>
         </section>
 
         <!-- Capabilities Grid -->
@@ -116,12 +112,12 @@
                 data.capabilities.forEach(cap => {
                     let iconHtml = cap.icon ? `<img src="${cap.icon}" style="height: 32px; width: auto;" alt="">` : '';
                     capabilitiesHtml += `
-                        <div class="bg-surface" style="border-radius: 20px; padding: var(--space-md); border-left: 4px solid var(--theme-accent); display: flex; flex-direction: column; align-items: flex-start;">
-                            <div style="display: flex; align-items: center; gap: var(--space-sm);">
+                        <div class="capability-card reveal-on-scroll">
+                            <div class="capability-card-header">
                                 ${iconHtml}
-                                <h3 style="font-size: 1.2rem;">${cap.title}</h3>
+                                <h3 class="capability-card-title">${cap.title}</h3>
                             </div>
-                            <p style="margin-top: var(--space-sm); font-size: 0.9rem;">${cap.description}</p>
+                            <p class="capability-card-desc">${cap.description}</p>
                         </div>`;
                 });
                 $('#capabilities-container').html(capabilitiesHtml);
@@ -131,7 +127,7 @@
                 if (data.projects && data.projects.length > 0) {
                     data.projects.forEach(proj => {
                         projectsHtml += `
-                            <div style="background: white; border: 1px solid rgba(0,0,0,0.05); border-radius: 20px; overflow: hidden;">
+                            <div class="project-card reveal-on-scroll">
                                 <div style="height: 250px; background-image: url('${proj.image}'); background-size: cover; background-position: center;">
                                 </div>
                                 <div style="padding: var(--space-md);">
@@ -146,6 +142,11 @@
                     projectsHtml = '<p style="grid-column: span 2; text-align: center; opacity: 0.6;">No case studies available for this division yet.</p>';
                 }
                 $('#projects-container').html(projectsHtml);
+
+                // Trigger Scroll Reveal Observer
+                if (typeof window.applyScrollReveal === 'function') {
+                    window.applyScrollReveal();
+                }
             }).fail(function () {
                 $('#hero-title').text('Error Loading Division');
                 $('#hero-accent').text('Error');

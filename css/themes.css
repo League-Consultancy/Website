@@ -94,3 +94,48 @@
     --theme-surface: #FFF8E6;
     --theme-border: #FFB703;
 }
+
+/* --- Theme Toggle & Dark Mode System --- */
+
+/* Base overrides for Dark Mode */
+body[data-theme-mode="dark"] {
+    --white: #121212;
+    --black: #FFFFFF;
+    --gray-light: #1A1A1A;
+    --gray-mid: #888888;
+    --gray-dark: #CCCCCC;
+}
+
+/* Dynamic surface/border adjustments for Division themes in Dark Mode */
+body[data-theme-mode="dark"][data-theme="home"] {
+    --theme-surface: #1E1E1E;
+    --theme-border: #FFFFFF;
+}
+
+body[data-theme-mode="dark"][data-theme="mechanical"] {
+    --theme-surface: #1E1E1E;
+}
+
+body[data-theme-mode="dark"][data-theme="electrical"] {
+    --theme-surface: #152A38;
+}
+
+body[data-theme-mode="dark"][data-theme="automation"] {
+    --theme-surface: #142911;
+}
+
+body[data-theme-mode="dark"][data-theme="ai-ml"] {
+    --theme-surface: #16192E;
+}
+
+body[data-theme-mode="dark"][data-theme="iot"] {
+    --theme-surface: #14272D;
+}
+
+body[data-theme-mode="dark"][data-theme="drone"] {
+    --theme-surface: #13261A;
+}
+
+body[data-theme-mode="dark"][data-theme="thermal"] {
+    --theme-surface: #2E2510;
+}

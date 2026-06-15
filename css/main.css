@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: -0.02em;
+    --h2-font-size: 3.5rem;
 }
 
 a {
@@ -104,7 +105,7 @@ header {
     letter-spacing: 0.1em;
     opacity: 0.6;
     transition: 0.3s ease;
-    color: black;
+    color: var(--theme-text);
 }
 
 .nav-link:hover {
@@ -230,7 +231,7 @@ footer{
 .footer-main p,
 .footer-main a {
     font-size: larger;
-    color: black;
+    color: var(--theme-text);
 }
 
 span{
@@ -306,6 +307,341 @@ span{
     .footer-main {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
+    }
+}
+
+/* --- Theme Toggle Switch Button CSS --- */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    color: var(--theme-text);
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(128, 128, 128, 0.15);
+}
+
+.nav-toggle-btn {
+    display: none;
+}
+
+.theme-toggle-icon {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body[data-theme-mode="dark"] .theme-toggle-icon {
+    transform: rotate(360deg);
+}
+
+/* Show/Hide Sun and Moon Elements based on data-theme-mode */
+body[data-theme-mode="light"] .moon-element {
+    display: none;
+}
+body[data-theme-mode="light"] .sun-element {
+    display: block;
+}
+body[data-theme-mode="dark"] .sun-element {
+    display: none;
+}
+body[data-theme-mode="dark"] .moon-element {
+    display: block;
+}
+
+/* --- Refactored Clean Component CSS (No Inline Styles) --- */
+.project-card {
+    background-color: var(--theme-surface);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+body[data-theme-mode="dark"] .project-card {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.capability-card {
+    background-color: var(--theme-surface);
+    border-radius: 20px;
+    padding: var(--space-md);
+    border-left: 4px solid var(--theme-accent);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.capability-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.capability-card-title {
+    font-size: 1.2rem;
+}
+
+.capability-card-desc {
+    margin-top: var(--space-sm);
+    font-size: 0.9rem;
+}
+
+/* --- Scroll Reveal Animation CSS --- */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Division Page Hero Styles --- */
+.division-hero {
+    height: 75vh;
+    scroll-snap-align: none !important;
+    background-color: var(--theme-surface);
+}
+
+.division-hero .portal-image {
+    top: 80px;
+    height: calc(100% - 80px);
+}
+
+#hero-title {
+    font-size: 3.5rem;
+    margin-top: var(--space-sm);
+    white-space: pre-line;
+}
+
+#hero-description {
+    max-width: 600px;
+    margin-top: var(--space-md);
+    font-size: 1.2rem;
+}
+
+/* --- Mobile & Tablet Responsiveness Adjustments --- */
+@media (max-width: 992px) {
+    h2{
+        --h2-font-size: 2.5rem;
+    }
+
+    .nav-toggle-btn {
+        display: inline-flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: var(--space-xs);
+        color: var(--theme-text);
+        z-index: 1001;
+        outline: none;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-toggle-btn:hover {
+        background-color: rgba(128, 128, 128, 0.1);
+    }
+
+    .nav-toggle-btn svg line {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform-origin: center;
+    }
+
+    .nav-toggle-btn.active .line-top {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .nav-toggle-btn.active .line-mid {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .nav-toggle-btn.active .line-bot {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 75%;
+        max-width: 300px;
+        background-color: var(--theme-surface);
+        border-left: 1px solid var(--theme-border);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-md) !important;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
+
+    .theme-toggle-btn {
+        margin-left: 0;
+        margin-top: var(--space-sm);
+    }
+
+    /* Mobile & Tablet Stacking for Portal Sections (Preserves Snap alignment) */
+    .portal-section {
+        flex-direction: column-reverse;
+        height: 100vh;
+        padding-top: 80px; /* Space for fixed header */
+        box-sizing: border-box;
+        display: flex;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    .portal-content {
+        width: 100%;
+        height: 55%;
+        padding: var(--space-md) !important;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: var(--space-xs);
+    }
+
+    .portal-image {
+        position: relative;
+        width: 100%;
+        height: 45%;
+        top: 0;
+        mask-image: none;
+        border-radius: 0;
+    }
+
+    /* Prevent logo text wrap on very small screens */
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    /* Division Hero Responsive Styles */
+    .division-hero {
+        height: auto !important;
+        min-height: auto;
+        padding-top: 80px;
+        flex-direction: column-reverse;
+        scroll-snap-align: none !important;
+    }
+
+    .division-hero .portal-image {
+        position: relative;
+        width: 100%;
+        height: 35vh;
+        min-height: 220px;
+        top: 0;
+        mask-image: none;
+        border-radius: 0;
+    }
+
+    .division-hero .portal-content {
+        width: 100%;
+        height: auto;
+        padding: var(--space-md) !important;
+        box-sizing: border-box;
+    }
+
+    #hero-title {
+        font-size: 2.2rem;
+    }
+
+    #hero-description {
+        font-size: 1rem;
+        margin-top: var(--space-sm);
+    }
+
+    /* Responsive & Optimized Footer Overrides */
+    footer {
+        padding: var(--space-lg) 0 var(--space-md) !important;
+    }
+
+    .footerhome {
+        height: 100vh;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--space-md) 0 !important;
+        scroll-snap-align: end !important;
+        box-sizing: border-box;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: var(--space-md) !important;
+        padding-bottom: var(--space-sm);
+    }
+
+    .footer-description {
+        display: none !important; /* Hide long description to fit in single screen */
+    }
+
+    .footer-info .logo {
+        margin-bottom: var(--space-sm) !important;
+    }
+
+    .footer-contact-item {
+        margin-bottom: var(--space-xs) !important;
+    }
+
+    .footer-social {
+        margin-top: var(--space-sm) !important;
+    }
+
+    .footer-services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-xs) var(--space-md) !important;
+        margin-top: var(--space-xs) !important;
+    }
+
+    .footer-bottom {
+        padding-top: var(--space-sm) !important;
+    }
+
+    @media (max-width: 600px) {
+        .footer-main {
+            grid-template-columns: 1fr;
+            gap: var(--space-sm) !important;
+        }
+
+        .footer-bottom {
+            flex-direction: column;
+            gap: var(--space-xs);
+            align-items: center;
+            text-align: center;
+        }
     }
 }
 

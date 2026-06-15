@@ -1,6 +1,21 @@
 /* League Consultancy - Component Loader */
 
 $(function () {
+    // Check for local file protocol and show helpful developer tip
+    if (window.location.protocol === 'file:') {
+        console.warn(
+            '%cLeague Consultancy Developer Tip:\n' +
+            '%cBrowser security settings block AJAX requests (like $.load and $.getJSON) when pages are loaded directly over file:// protocol.\n' +
+            'To view the website correctly with header, footer, and dynamic data, please run a local web server.\n' +
+            'Examples:\n' +
+            ' - Node.js: npx http-server\n' +
+            ' - Python: python -m http.server\n' +
+            ' - VS Code: Live Server extension',
+            'font-weight: bold; color: #ffb703; font-size: 14px;',
+            'color: var(--theme-text, #333); font-size: 12px;'
+        );
+    }
+
     // Determine the relative path prefix
     // If the URL contains '/divisions/', we need to go up one level
     const path = window.location.pathname;
@@ -11,6 +26,12 @@ $(function () {
     $('header').load(prefix + 'header.html', function () {
         console.log('Header loaded');
         fixPaths($(this), prefix);
+        if (typeof window.setupThemeToggle === 'function') {
+            window.setupThemeToggle();
+        }
+        if (typeof window.setupMobileNav === 'function') {
+            window.setupMobileNav();
+        }
     });
 
     // Load Footer
