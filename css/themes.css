@@ -139,3 +139,11 @@ body[data-theme-mode="dark"][data-theme="drone"] {
 body[data-theme-mode="dark"][data-theme="thermal"] {
     --theme-surface: #2E2510;
 }
+
+/* Invert light theme root asset icons in Dark Mode for readability */
+body[data-theme-mode="dark"] .capability-card-header img,
+body[data-theme-mode="dark"] .info-card-icon img,
+body[data-theme-mode="dark"] .footer-contact-item img {
+    filter: invert(1) brightness(1.5);
+    opacity: 0.9;
+}
