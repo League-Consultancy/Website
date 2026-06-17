@@ -298,6 +298,16 @@ span{
     text-transform: uppercase;
 }
 
+.footer-copyright {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5ch;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
 .footer-bottom-links {
     display: flex;
     gap: var(--space-md);
@@ -527,6 +537,10 @@ body[data-theme-mode="dark"] .project-card {
         z-index: 10;
     }
 
+    .portal-content .btn {
+        align-self: center;
+    }
+
     .hero-title {
         font-size: 2.2rem;
         margin-bottom: var(--space-xs);
@@ -636,11 +650,26 @@ body[data-theme-mode="dark"] .project-card {
             gap: var(--space-sm) !important;
         }
 
+        .footer-services {
+            display: none !important;
+        }
+
+        .footer-copyright {
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: var(--space-xs);
+        }
+
         .footer-bottom {
             flex-direction: column;
             gap: var(--space-xs);
             align-items: center;
             text-align: center;
+        }
+
+        .footer-bottom-links {
+            justify-content: center;
         }
     }
 }
