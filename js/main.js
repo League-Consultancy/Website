@@ -28,6 +28,26 @@ window.applyScrollReveal = function () {
     revealElements.forEach(el => window.revealObserver.observe(el));
 };
 
+// Helper to update logos based on theme mode
+window.updateLogos = function() {
+    const currentMode = document.body.getAttribute('data-theme-mode') || 'light';
+    const logos = document.querySelectorAll('.logo img');
+    logos.forEach(img => {
+        const src = img.getAttribute('src');
+        if (!src) return;
+        
+        if (currentMode === 'dark') {
+            if (src.includes('League_Logo.svg')) {
+                img.setAttribute('src', src.replace('League_Logo.svg', 'League Consultancy (Logo) Removed BG White.png'));
+            }
+        } else {
+            if (src.includes('League Consultancy (Logo) Removed BG White.png')) {
+                img.setAttribute('src', src.replace('League Consultancy (Logo) Removed BG White.png', 'League_Logo.svg'));
+            }
+        }
+    });
+};
+
 // Setup theme toggle callback
 window.setupThemeToggle = function() {
     const toggleBtn = document.getElementById('theme-toggle');
@@ -38,6 +58,7 @@ window.setupThemeToggle = function() {
         const newMode = currentMode === 'light' ? 'dark' : 'light';
         document.body.setAttribute('data-theme-mode', newMode);
         localStorage.setItem('theme-mode', newMode);
+        window.updateLogos();
     });
 };
 
@@ -75,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-verify theme state on DOMContentLoaded
     const currentMode = localStorage.getItem('theme-mode') || 'light';
     document.body.setAttribute('data-theme-mode', currentMode);
+    window.updateLogos();
 
     // Initialize reveal for static items
     window.applyScrollReveal();

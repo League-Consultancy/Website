@@ -32,12 +32,18 @@ $(function () {
         if (typeof window.setupMobileNav === 'function') {
             window.setupMobileNav();
         }
+        if (typeof window.updateLogos === 'function') {
+            window.updateLogos();
+        }
     });
 
     // Load Footer
     $('footer').load(prefix + 'footer.html', function () {
         console.log('Footer loaded');
         fixPaths($(this), prefix);
+        if (typeof window.updateLogos === 'function') {
+            window.updateLogos();
+        }
     });
 
     /**
