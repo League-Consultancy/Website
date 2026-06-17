@@ -2,13 +2,60 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWZGRCFBS7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RWZGRCFBS7');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | League Consultancy</title>
-    <meta name="description" content="Get in touch with League Consultancy experts.">
+    <title>Contact League Consultancy | Engineering & Tech Solutions India</title>
+    <meta name="description" content="Contact League Consultancy for precision engineering, robotics, AI/ML, IoT, and industrial automation solutions. Get expert consultation from our Ahmedabad, India team.">
+    <link rel="canonical" href="https://leagueconsultancy.com/contact.html">
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/svg" href="./assets/logos/League_Logo.svg">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact League Consultancy | Engineering & Tech Solutions India">
+    <meta property="og:description" content="Contact League Consultancy for precision engineering, robotics, AI/ML, IoT, and industrial automation solutions. Get expert consultation from our Ahmedabad, India team.">
+    <meta property="og:image" content="https://leagueconsultancy.com/assets/logos/League_Logo.svg">
+    <meta property="og:url" content="https://leagueconsultancy.com/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="League Consultancy">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact League Consultancy | Engineering & Tech Solutions India">
+    <meta name="twitter:description" content="Contact League Consultancy for precision engineering, robotics, AI/ML, IoT, and industrial automation solutions.">
+    <meta name="twitter:image" content="https://leagueconsultancy.com/assets/logos/League_Logo.svg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "League Consultancy",
+      "url": "https://leagueconsultancy.com",
+      "logo": "https://leagueconsultancy.com/assets/logos/League_Logo.svg",
+      "description": "Multi-disciplinary technical firm providing state-of-the-art solutions across 7 specialized divisions including AI/ML, Robotics, IoT, and Precision Engineering.",
+      "email": "info@leagueconsultancy.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/league-consultancy/"
+      ]
+    }
+    </script>
 </head>
 
 <body data-theme="home">
@@ -22,7 +69,7 @@
                     <!-- Left: Info & Map -->
                     <div>
                         <p class="text-mono text-accent">GET IN TOUCH</p>
-                        <h2 class="contact-info-title">Let's Build<br>Something Great.</h2>
+                        <h1 class="contact-info-title">Let's Build<br>Something Great.</h1>
                         <p class="contact-info-desc">
                             Reach out to our multi-disciplinary engineering teams to discuss custom AI systems, hardware design, or industrial automation.
                         </p>
@@ -30,7 +77,7 @@
                         <div class="info-cards">
                             <!-- Email -->
                             <div class="info-card">
-                                <span class="info-card-icon"><img src="assets/email-svgrepo-com.svg" style="height: 24px; width: auto;" alt="Email"></span>
+                                <span class="info-card-icon"><img src="assets/email-svgrepo-com.svg" style="height: 24px; width: auto;" alt="Email icon"></span>
                                 <div class="info-card-content">
                                     <h4 class="text-mono text-accent">EMAIL</h4>
                                     <p><a href="mailto:info@leagueconsultancy.com">info@leagueconsultancy.com</a></p>
@@ -39,7 +86,7 @@
 
                             <!-- Location -->
                             <div class="info-card">
-                                <span class="info-card-icon"><img src="assets/location-pin-svgrepo-com.svg" style="height: 24px; width: auto;" alt="Location"></span>
+                                <span class="info-card-icon"><img src="assets/location-pin-svgrepo-com.svg" style="height: 24px; width: auto;" alt="Location pin icon"></span>
                                 <div class="info-card-content">
                                     <h4 class="text-mono text-accent">LOCATION</h4>
                                     <p>Ahmedabad, Gujarat, India</p>
@@ -53,7 +100,8 @@
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117507.80572714243!2d72.5085994468694!3d23.022356191769493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fccd11d087798c1!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1716500000000!5m2!1sen!2sin" 
                                 allowfullscreen="" 
                                 loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="League Consultancy location on Google Maps">
                             </iframe>
                         </div>
                     </div>
@@ -99,25 +147,23 @@
     <footer></footer>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/loader.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="js/loader.js" defer></script>
+    <script src="js/main.js" defer></script>
 
     <script>
-        $(function() {
-            $('#contact-form').on('submit', function(e) {
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
                 e.preventDefault();
                 
                 // Show success feedback
-                $('#success-alert').addClass('active');
+                document.getElementById('success-alert').classList.add('active');
                 
                 // Reset form fields
-                $('#contact-form')[0].reset();
+                document.getElementById('contact-form').reset();
                 
                 // Scroll to alert
-                $('html, body').animate({
-                    scrollTop: $('#success-alert').offset().top - 120
-                }, 400);
+                document.getElementById('success-alert').scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         });
     </script>
