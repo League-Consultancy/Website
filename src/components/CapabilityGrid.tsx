@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Cpu, Code, Eye, Settings, Wifi, Wrench, Database, Layers, type LucideIcon } from "lucide-react";
 import type { Capability } from "@/data/capabilities";
+import SolutionModal from "./SolutionModal";
 
 const ICON_MAP: Record<string, LucideIcon> = {
   cpu: Cpu,
@@ -16,7 +17,15 @@ const ICON_MAP: Record<string, LucideIcon> = {
   layers: Layers,
 };
 
-function CapabilityCard({ capability, index }: { capability: Capability; index: number }) {
+function CapabilityCard({
+  capability,
+  index,
+  onSelect,
+}: {
+  capability: Capability;
+  index: number;
+  onSelect: (cap: Capability) => void;
+}) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,7 +53,8 @@ function CapabilityCard({ capability, index }: { capability: Capability; index: 
   return (
     <div
       ref={cardRef}
-      className="card-dark p-6 group cursor-default"
+      onClick={() => onSelect(capability)}
+      className="card-dark p-6 group cursor-pointer flex flex-col"
       style={{ opacity: 0, transform: "translateY(24px)" }}
     >
       {/* Number + Icon Row */}
@@ -65,7 +75,7 @@ function CapabilityCard({ capability, index }: { capability: Capability; index: 
       <div className="accent-line mb-4" aria-hidden="true" />
 
       {/* Title */}
-      <h3 className="text-white font-700 text-[1.0625rem] leading-snug mb-3 tracking-[-0.01em]">
+      <h3 className="text-white font-700 text-[1.0625rem] leading-snug mb-3 tracking-[-0.01em] group-hover:text-[#62B8FF] transition-colors duration-200">
         {capability.title}
       </h3>
 
@@ -75,7 +85,7 @@ function CapabilityCard({ capability, index }: { capability: Capability; index: 
       </p>
 
       {/* Tags */}
-      <div className="flex flex-wrap gap-1.5 mb-5">
+      <div className="flex flex-wrap gap-1.5 mb-5 mt-auto">
         {capability.tags.map((tag) => (
           <span key={tag} className="tag-pill text-[0.7rem]">
             {tag}
@@ -83,18 +93,24 @@ function CapabilityCard({ capability, index }: { capability: Capability; index: 
         ))}
       </div>
 
-      {/* Link */}
-      <Link
-        href={`/solutions/${capability.id}`}
-        className="flex items-center gap-2 text-[0.8125rem] text-[#9AA2AD] hover:text-[#62B8FF] transition-colors duration-200 group/link"
-      >
-        Learn more
-        <ArrowRight
-          size={13}
-          className="group-hover/link:translate-x-1 transition-transform duration-200"
-          aria-hidden="true"
-        />
-      </Link>
+      {/* Action button */}
+      <div className="pt-2 border-t border-white/[0.04]">
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onSelect(capability);
+          }}
+          className="flex items-center gap-2 text-[0.8125rem] text-[#9AA2AD] group-hover:text-[#62B8FF] transition-colors duration-200"
+        >
+          Learn more
+          <ArrowRight
+            size={13}
+            className="group-hover:translate-x-1 transition-transform duration-200"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
     </div>
   );
 }
@@ -104,6 +120,7 @@ interface CapabilityGridProps {
 }
 
 export default function CapabilityGrid({ capabilities }: CapabilityGridProps) {
+  const [selectedCapability, setSelectedCapability] = useState<Capability | null>(null);
   const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -128,9 +145,9 @@ export default function CapabilityGrid({ capabilities }: CapabilityGridProps) {
 
   return (
     <section
-      id="capabilities"
-      aria-labelledby="capabilities-heading"
-      className="section-dark-alt section-spacing"
+      id="solutions"
+      aria-labelledby="solutions-heading"
+      className="section-dark-alt section-spacing scroll-mt-20"
     >
       <div className="container-xl">
         {/* Header */}
@@ -139,10 +156,10 @@ export default function CapabilityGrid({ capabilities }: CapabilityGridProps) {
           className="mb-16"
           style={{ opacity: 0, transform: "translateY(20px)" }}
         >
-          <p className="text-eyebrow mb-4">Capabilities</p>
+          <p className="text-eyebrow mb-4">Engineering Capabilities</p>
           <div className="grid lg:grid-cols-2 gap-8 items-end">
             <h2
-              id="capabilities-heading"
+              id="solutions-heading"
               className="text-display-md text-white"
             >
               WHAT WE BUILD
@@ -158,7 +175,12 @@ export default function CapabilityGrid({ capabilities }: CapabilityGridProps) {
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {capabilities.map((cap, i) => (
-            <CapabilityCard key={cap.id} capability={cap} index={i} />
+            <CapabilityCard
+              key={cap.id}
+              capability={cap}
+              index={i}
+              onSelect={(item) => setSelectedCapability(item)}
+            />
           ))}
         </div>
 
@@ -177,7 +199,7 @@ export default function CapabilityGrid({ capabilities }: CapabilityGridProps) {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="#contact"
               className="btn-ghost shrink-0"
               id="capability-grid-cta"
             >
@@ -187,6 +209,12 @@ export default function CapabilityGrid({ capabilities }: CapabilityGridProps) {
           </div>
         </div>
       </div>
+
+      {/* Solution Detail Modal */}
+      <SolutionModal
+        capability={selectedCapability}
+        onClose={() => setSelectedCapability(null)}
+      />
     </section>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import Link from "next/link";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 
 const INDUSTRIES = [
@@ -104,9 +103,27 @@ export default function ContactForm() {
           Thank you for reaching out. We will review your project details and
           get back to you shortly.
         </p>
-        <Link href="/" className="btn-secondary">
-          Back to Home
-        </Link>
+        <button
+          type="button"
+          onClick={() => {
+            setStatus("idle");
+            setFormData({
+              name: "",
+              company: "",
+              email: "",
+              phone: "",
+              description: "",
+              industry: "",
+              projectType: "",
+              timeline: "",
+              technicalRequirements: "",
+              additionalInfo: "",
+            });
+          }}
+          className="btn-secondary"
+        >
+          Send Another Message
+        </button>
       </div>
     );
   }

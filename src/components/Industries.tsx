@@ -105,7 +105,7 @@ export default function Industries({ industries }: IndustriesProps) {
     <section
       id="industries"
       aria-labelledby="industries-heading"
-      className="section-light section-spacing tech-grid-bg-light"
+      className="section-light section-spacing tech-grid-bg-light scroll-mt-20"
     >
       <div className="container-xl">
         {/* Header */}

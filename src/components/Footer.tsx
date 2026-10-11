@@ -3,12 +3,12 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "Solutions", href: "/solutions" },
-  { label: "Industries", href: "/industries" },
-  { label: "Projects", href: "/projects" },
-  { label: "How We Work", href: "/how-we-work" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Solutions", href: "#solutions" },
+  { label: "How We Work", href: "#how-we-work" },
+  { label: "Projects", href: "#projects" },
+  { label: "Industries", href: "#industries" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Footer() {
@@ -67,7 +67,7 @@ export default function Footer() {
             <nav aria-label="Footer navigation">
               <ul role="list" className="space-y-3">
                 {NAV_LINKS.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.label}>
                     <Link
                       href={link.href}
                       className="text-[#9AA2AD] hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group"
@@ -88,20 +88,20 @@ export default function Footer() {
           {/* Capabilities quick-nav */}
           <div>
             <p className="text-[#59616D] text-xs tracking-[0.15em] uppercase mb-5 font-600">
-              Solutions
+              Disciplines
             </p>
             <nav aria-label="Solutions navigation">
               <ul role="list" className="space-y-3">
                 {[
-                  { label: "AI & Intelligent Systems", href: "/solutions/ai-intelligent-systems" },
-                  { label: "Computer Vision", href: "/solutions/computer-vision" },
-                  { label: "Software & Web", href: "/solutions/software-web" },
-                  { label: "Robotics & Automation", href: "/solutions/robotics-automation" },
-                  { label: "IoT & IIoT", href: "/solutions/iot-iiot" },
-                  { label: "Mechanical Engineering", href: "/solutions/mechanical-engineering" },
-                  { label: "RAG & LLM Systems", href: "/solutions/rag-llm" },
+                  { label: "AI & Intelligent Systems", href: "#solutions" },
+                  { label: "Computer Vision", href: "#solutions" },
+                  { label: "Software & Web", href: "#solutions" },
+                  { label: "Robotics & Automation", href: "#solutions" },
+                  { label: "IoT & IIoT", href: "#solutions" },
+                  { label: "Mechanical Engineering", href: "#solutions" },
+                  { label: "RAG & LLM Systems", href: "#solutions" },
                 ].map((link) => (
-                  <li key={link.href}>
+                  <li key={link.label}>
                     <Link
                       href={link.href}
                       className="text-[#9AA2AD] hover:text-white text-sm transition-colors duration-200"

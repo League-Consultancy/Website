@@ -1,13 +1,21 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import type { Project } from "@/data/projects";
+import ProjectModal from "./ProjectModal";
 
 const CATEGORIES = ["All", "AI", "Computer Vision", "Software", "Robotics", "IoT", "Mechanical", "Automation"];
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({
+  project,
+  index,
+  onSelect,
+}: {
+  project: Project;
+  index: number;
+  onSelect: (p: Project) => void;
+}) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,20 +39,21 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <div
       ref={cardRef}
-      className="card-dark flex flex-col overflow-hidden group"
+      onClick={() => onSelect(project)}
+      className="card-dark flex flex-col overflow-hidden group cursor-pointer"
       style={{ opacity: 0, transform: "translateY(24px)" }}
     >
-      {/* Project image placeholder */}
-      <div className="relative h-48 bg-[#090B10] border-b border-white/[0.04] flex items-center justify-center overflow-hidden">
+      {/* Project header banner */}
+      <div className="relative h-44 bg-[#090B10] border-b border-white/[0.04] flex items-center justify-center overflow-hidden">
         <div
           aria-hidden="true"
           className="absolute inset-0 tech-grid-bg opacity-60"
         />
         <div
           aria-hidden="true"
-          className="w-16 h-16 rounded-2xl border border-[#62B8FF]/20 bg-[#62B8FF]/[0.05] flex items-center justify-center relative z-10"
+          className="w-14 h-14 rounded-2xl border border-[#62B8FF]/20 bg-[#62B8FF]/[0.05] flex items-center justify-center relative z-10"
         >
-          <div className="w-4 h-4 rounded-full bg-[#62B8FF]/40" />
+          <div className="w-3.5 h-3.5 rounded-full bg-[#62B8FF]/40" />
         </div>
         {project.status && (
           <div className="absolute top-3 right-3 status-badge status-badge-dev">
@@ -60,7 +69,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       {/* Content */}
       <div className="p-6 flex-1 flex flex-col">
         {/* Category + Industry */}
-        <div className="flex flex-wrap gap-1.5 mb-4">
+        <div className="flex flex-wrap gap-1.5 mb-3">
           <span className="tag-pill-accent">{project.category}</span>
           <span className="tag-pill">{project.industry}</span>
         </div>
@@ -96,17 +105,21 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </div>
 
         <div className="pt-4 border-t border-white/[0.04]">
-          <Link
-            href={`/projects/${project.slug}`}
-            className="flex items-center gap-2 text-[0.8125rem] text-[#9AA2AD] hover:text-[#62B8FF] transition-colors duration-200 group/link"
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onSelect(project);
+            }}
+            className="flex items-center gap-2 text-[0.8125rem] text-[#9AA2AD] group-hover:text-[#62B8FF] transition-colors duration-200"
           >
-            View project
+            View details
             <ArrowRight
               size={13}
-              className="group-hover/link:translate-x-1 transition-transform duration-200"
+              className="group-hover:translate-x-1 transition-transform duration-200"
               aria-hidden="true"
             />
-          </Link>
+          </button>
         </div>
       </div>
     </div>
@@ -129,6 +142,8 @@ export default function ProjectGrid({
   limit,
 }: ProjectGridProps) {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [showAll, setShowAll] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -153,13 +168,14 @@ export default function ProjectGrid({
     ? projects
     : projects.filter((p) => p.categories.includes(activeCategory));
 
-  const displayed = limit ? filtered.slice(0, limit) : filtered;
+  const shouldLimit = Boolean(limit && !showAll);
+  const displayed = shouldLimit ? filtered.slice(0, limit) : filtered;
 
   return (
     <section
       id="projects"
       aria-labelledby="projects-heading"
-      className="section-dark section-spacing"
+      className="section-dark section-spacing scroll-mt-20"
     >
       <div className="container-xl">
         {/* Header */}
@@ -187,10 +203,13 @@ export default function ProjectGrid({
             {CATEGORIES.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => {
+                  setActiveCategory(cat);
+                  setShowAll(false);
+                }}
                 aria-pressed={activeCategory === cat}
                 className={[
-                  "px-4 py-2 rounded-lg text-sm font-600 transition-all duration-200",
+                  "px-4 py-2 rounded-lg text-sm font-600 transition-all duration-200 cursor-pointer",
                   activeCategory === cat
                     ? "bg-[#62B8FF] text-[#090B10]"
                     : "bg-[#11151C] text-[#9AA2AD] border border-white/[0.06] hover:border-[#62B8FF]/30 hover:text-white",
@@ -206,7 +225,12 @@ export default function ProjectGrid({
         {displayed.length > 0 ? (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {displayed.map((project, i) => (
-              <ProjectCard key={project.slug} project={project} index={i} />
+              <ProjectCard
+                key={project.slug}
+                project={project}
+                index={i}
+                onSelect={(p) => setSelectedProject(p)}
+              />
             ))}
           </div>
         ) : (
@@ -215,16 +239,35 @@ export default function ProjectGrid({
           </div>
         )}
 
-        {/* View All CTA */}
+        {/* View All Toggle */}
         {limit && filtered.length > limit && (
           <div className="mt-12 text-center">
-            <Link href="/projects" className="btn-secondary" id="projects-view-all">
-              View all projects
-              <ArrowRight size={14} aria-hidden="true" />
-            </Link>
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="btn-secondary"
+              id="projects-toggle-all"
+            >
+              {showAll ? (
+                <>
+                  Show fewer projects
+                  <ChevronUp size={16} aria-hidden="true" />
+                </>
+              ) : (
+                <>
+                  View all {filtered.length} projects
+                  <ChevronDown size={16} aria-hidden="true" />
+                </>
+              )}
+            </button>
           </div>
         )}
       </div>
+
+      {/* Project Details Modal */}
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 }

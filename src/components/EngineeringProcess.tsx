@@ -48,7 +48,6 @@ const STEPS = [
 ];
 
 export default function EngineeringProcess() {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const stepsRef = useRef<HTMLLIElement[]>([]);
 
   useEffect(() => {
@@ -75,9 +74,9 @@ export default function EngineeringProcess() {
 
   return (
     <section
-      id="engineering-process"
+      id="how-we-work"
       aria-labelledby="process-heading"
-      className="section-dark section-spacing relative overflow-hidden"
+      className="section-dark section-spacing relative overflow-hidden scroll-mt-20"
     >
       {/* Background decoration */}
       <div

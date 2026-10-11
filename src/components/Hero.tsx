@@ -91,7 +91,7 @@ export default function Hero() {
               style={{ opacity: 0 }}
             >
               <Link
-                href="/contact"
+                href="#contact"
                 className="btn-primary"
                 id="hero-cta-primary"
               >
@@ -99,7 +99,7 @@ export default function Hero() {
                 <ArrowRight size={16} aria-hidden="true" />
               </Link>
               <Link
-                href="/projects"
+                href="#projects"
                 className="btn-secondary"
                 id="hero-cta-secondary"
               >
@@ -123,13 +123,14 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#59616D] animate-bounce"
-        aria-hidden="true"
+      <a
+        href="#solutions"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#59616D] hover:text-[#62B8FF] transition-colors animate-bounce cursor-pointer"
+        aria-label="Scroll to solutions"
       >
         <span className="text-[10px] tracking-[0.2em] uppercase">Scroll</span>
         <ChevronDown size={16} />
-      </div>
+      </a>
     </section>
   );
 }

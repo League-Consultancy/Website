@@ -19,7 +19,7 @@ export default function NotFound() {
               <ArrowLeft size={14} aria-hidden="true" />
               Back to Home
             </Link>
-            <Link href="/contact" className="btn-secondary">
+            <Link href="/#contact" className="btn-secondary">
               Contact Us
             </Link>
           </div>

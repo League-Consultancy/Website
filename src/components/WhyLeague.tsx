@@ -4,6 +4,13 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+const STATS = [
+  { value: "2026", label: "Founded" },
+  { value: "9+", label: "Engineering Disciplines" },
+  { value: "India", label: "Headquartered" },
+  { value: "Worldwide", label: "Clients Served" },
+];
+
 const PILLARS = [
   {
     number: "01",
@@ -33,16 +40,17 @@ const PILLARS = [
 
 export default function WhyLeague() {
   const headerRef = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
   const pillarsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-    const all = [headerRef.current, ...pillarsRef.current];
+    const all = [headerRef.current, statsRef.current, ...pillarsRef.current];
     all.forEach((el, i) => {
       if (!el) return;
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            el.style.transition = `opacity 0.7s ease ${i * 80}ms, transform 0.7s ease ${i * 80}ms`;
+            el.style.transition = `opacity 0.7s ease ${i * 70}ms, transform 0.7s ease ${i * 70}ms`;
             el.style.opacity = "1";
             el.style.transform = "translateY(0)";
             observer.disconnect();
@@ -56,9 +64,9 @@ export default function WhyLeague() {
 
   return (
     <section
-      id="why-league"
-      aria-labelledby="why-league-heading"
-      className="section-dark-alt section-spacing relative overflow-hidden"
+      id="about"
+      aria-labelledby="about-heading"
+      className="section-dark-alt section-spacing relative overflow-hidden scroll-mt-20"
     >
       <div
         aria-hidden="true"
@@ -69,19 +77,41 @@ export default function WhyLeague() {
         {/* Header */}
         <div
           ref={headerRef}
-          className="grid lg:grid-cols-2 gap-8 items-end mb-16"
+          className="grid lg:grid-cols-2 gap-8 items-end mb-12"
           style={{ opacity: 0, transform: "translateY(20px)" }}
         >
           <div>
-            <p className="text-eyebrow mb-4">Differentiators</p>
-            <h2 id="why-league-heading" className="text-display-md text-white">
-              WHY LEAGUE
+            <p className="text-eyebrow mb-4">About LEAGUE</p>
+            <h2 id="about-heading" className="text-display-md text-white">
+              ENGINEERING WITH PURPOSE
             </h2>
           </div>
           <p className="text-body-lg max-w-md">
-            A technical company structured to take a problem from first
-            conversation to deployed product.
+            LEAGUE Consultancy was founded to turn ideas and complex business
+            challenges into practical, working technology solutions — handling
+            the full stack from software to hardware.
           </p>
+        </div>
+
+        {/* Stats Grid */}
+        <div
+          ref={statsRef}
+          className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16"
+          style={{ opacity: 0, transform: "translateY(20px)" }}
+        >
+          {STATS.map((stat) => (
+            <div
+              key={stat.label}
+              className="p-6 rounded-2xl border border-white/[0.06] bg-[#090B10]"
+            >
+              <p className="text-[#62B8FF] font-800 text-3xl tracking-[-0.02em] mb-1">
+                {stat.value}
+              </p>
+              <p className="text-[#9AA2AD] text-xs uppercase tracking-wider font-600">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Pillars Grid */}
@@ -106,18 +136,17 @@ export default function WhyLeague() {
         </div>
 
         {/* Bottom CTA strip */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:items-center justify-between p-6 rounded-2xl border border-white/[0.06] bg-[#090B10]">
+        <div className="flex flex-col sm:flex-row gap-4 sm:items-center justify-between p-6 sm:p-8 rounded-2xl border border-white/[0.06] bg-[#090B10]">
           <div>
-            <p className="text-white font-700 mb-1">
+            <p className="text-white font-700 text-base mb-1">
               Small enough to care. Technical enough to build.
             </p>
             <p className="text-[#9AA2AD] text-sm">
-              Structured enough to handle the complete product engineering
-              process.
+              Structured to handle the complete product engineering process from first conversation to deployed system.
             </p>
           </div>
           <Link
-            href="/contact"
+            href="#contact"
             className="btn-primary shrink-0"
             id="why-league-cta"
           >
